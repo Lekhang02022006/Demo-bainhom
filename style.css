@@ -1,0 +1,76 @@
+header {
+    background-color: rgb(255, 184, 202);
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.custom-navbar {
+    animation: slideInDown 0.5s ease;
+    background-color: rgb(255, 184, 202);
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+    background-color: rgb(3, 31, 34);
+    color: white;
+}
+
+
+
+
+
+.custom-navbar .navbar-nav .nav-link{
+
+    background-color: rgb(6, 131, 151);
+    color: white;
+    /* đổi sang màu bạn muốn */
+    border: 2px solid rgb(6, 131, 151);
+    border-radius: 5px;
+    padding: 5px 12px;
+    /* tạo khoảng cách giống nút */
+    margin: 4px 5px;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    background-color: rgb(0, 80, 103);
+    color: white;
+}
+
+.btn-custom-search {
+    --bs-btn-bg: rgb(6, 131, 151);
+    --bs-btn-border-color: rgb(6, 131, 151);
+    --bs-btn-hover-bg: rgb(0, 80, 103);
+    --bs-btn-hover-border-color: rgb(0, 80, 103);
+    --bs-btn-color: white;
+}
+
+footer ul {
+    list-style: none;
+
+
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer h3 {
+    margin-top: 5px;
+}
+
+.tintuc {
+    text-align: justify;
+    padding: 20px;
+}
