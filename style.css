@@ -1,5 +1,5 @@
 header {
-    background-color: rgb(255, 184, 202);
+    background-color: rgb(254, 151, 202);
 }
 
 @keyframes slideInDown {
@@ -14,46 +14,41 @@ header {
 
 .custom-navbar {
     animation: slideInDown 0.5s ease;
-    background-color: rgb(255, 184, 202);
+    background-color: rgb(254, 151, 202);
     z-index: 9999;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 
 footer {
-    background-color: rgb(3, 31, 34);
+    background-color: rgb(62, 196, 187);
     color: white;
 }
 
 
-
-
-
-.custom-navbar .navbar-nav .nav-link{
-
-    background-color: rgb(6, 131, 151);
-    color: white;
+.custom-navbar .navbar-nav .nav-link, .btn-custom-search {
+    background-color: rgb(255, 205, 53);
+    color: rgb(62, 196, 187);
     /* đổi sang màu bạn muốn */
-    border: 2px solid rgb(6, 131, 151);
-    border-radius: 5px;
+
+    border-radius: 0.5rem;
     padding: 5px 12px;
     /* tạo khoảng cách giống nút */
     margin: 4px 5px;
-    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+
+    transition: 0.3s ease-out;
 }
 
-.custom-navbar .navbar-nav .nav-link:hover {
-    background-color: rgb(0, 80, 103);
-    color: white;
+.custom-navbar .navbar-nav .nav-link:hover, .btn-custom-search:hover {
+    background-color: rgb(62, 196, 187);
+    color: rgb(255, 205, 53);
+
+    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.16);
+    transition: 0.3s ease-out;
 }
 
-.btn-custom-search {
-    --bs-btn-bg: rgb(6, 131, 151);
-    --bs-btn-border-color: rgb(6, 131, 151);
-    --bs-btn-hover-bg: rgb(0, 80, 103);
-    --bs-btn-hover-border-color: rgb(0, 80, 103);
-    --bs-btn-color: white;
-}
+
 
 footer ul {
     list-style: none;
@@ -61,13 +56,41 @@ footer ul {
 
 }
 
-footer ul li a {
+a {
     text-decoration: none;
     color: white;
 }
 
 footer h3 {
     margin-top: 5px;
+}
+
+#sticky-to-top.to-top {
+    visibility: visible;
+    z-index: 9999;
+}
+
+#sticky-to-top {
+    position: fixed;
+    background-color: rgb(62, 196, 187);
+    bottom: 1rem;
+    right: 2rem;
+    border-radius: 0.5rem;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Tạo viền */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+
+    transition: 0.3s ease-out;
+}
+
+#sticky-to-top:hover{
+    filter: brightness(1.05);
+    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.16);
+    transition: 0.3s ease-out;
 }
 
 .tintuc {
