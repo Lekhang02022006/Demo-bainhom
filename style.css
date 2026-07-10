@@ -1,3 +1,9 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* =========================== HEADER =========================== */
 header {
     background-color: rgb(254, 151, 202);
 }
@@ -19,14 +25,8 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-footer {
-    background-color: rgb(62, 196, 187);
-    color: white;
-}
-
-
-.custom-navbar .navbar-nav .nav-link, .btn-custom-search {
+.custom-navbar .navbar-nav .nav-link,
+.btn-custom-search {
     background-color: rgb(255, 205, 53);
     color: rgb(62, 196, 187);
     /* đổi sang màu bạn muốn */
@@ -40,7 +40,8 @@ footer {
     transition: 0.3s ease-out;
 }
 
-.custom-navbar .navbar-nav .nav-link:hover, .btn-custom-search:hover {
+.custom-navbar .navbar-nav .nav-link:hover,
+.btn-custom-search:hover {
     background-color: rgb(62, 196, 187);
     color: rgb(255, 205, 53);
 
@@ -48,23 +49,60 @@ footer {
     transition: 0.3s ease-out;
 }
 
+/* =========================== FOOTER =========================== */
 
+footer {
+    background-color: rgb(62, 196, 187);
+    color: white;
+}
 
 footer ul {
     list-style: none;
-
-
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
+
 
 footer h3 {
     margin-top: 5px;
 }
 
+/* SOCIAL MEDIA */
+.social {
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    
+    height: 45px;
+    width: 45px;
+    transition: all 0.3s ease-out;
+    display:flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.75rem;
+    margin-top: 0.75rem;
+    font-size: 1.5rem;
+    
+}
+
+.iconfa-facebook{
+    background-color: #1379b1;
+    
+}
+
+.iconfa-youtube{
+    background-color: #cd0246;
+}
+
+.iconfa-tiktok {
+    background-color: rgba(0, 0, 0, 0.8 );
+}
+
+.iconfa-instagram{
+    background-color: #d33680;
+}
+
+
+/* BOTTON TO TOP */
 #sticky-to-top.to-top {
     visibility: visible;
     z-index: 9999;
@@ -87,12 +125,14 @@ footer h3 {
     transition: 0.3s ease-out;
 }
 
-#sticky-to-top:hover{
+#sticky-to-top:hover {
     filter: brightness(1.05);
     box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.16);
     transition: 0.3s ease-out;
 }
 
+
+/* =========================== TRANG CHỦ =========================== */
 .tintuc {
     text-align: justify;
     padding: 20px;
