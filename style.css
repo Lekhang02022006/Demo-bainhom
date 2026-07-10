@@ -84,10 +84,14 @@ footer h3 {
     
 }
 
+.social:hover{
+    border: 3px solid rgba(255, 255, 255, 0.3)
+}
+
 .iconfa-facebook{
     background-color: #1379b1;
-    
 }
+
 
 .iconfa-youtube{
     background-color: #cd0246;
