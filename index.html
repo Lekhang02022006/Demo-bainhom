@@ -34,51 +34,87 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md custom-navbar fixed-top">
+    <header class=" sticky-top d-block">
+
+        <nav class="navbar navbar-expand-md custom-navbar">
+
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Logo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse my-1" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active fw-bold" aria-current="page" href="#">TRANG CHỦ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active fw-bold" aria-current="page" href="#">GIỚI THIỆU</a>
-                        </li>
+                <div class="row">
+                    <div class="col-5   col-sm-4 col-md-3 col-xl-2">
+                        <a class="navbar-brand logo consectetur-fluid" href="#">
+                            <img src="img/logo.png" alt="" width="100%"></a>
+                    </div>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                SẢN PHẨM
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Cọ</a></li>
-                                <li><a class="dropdown-item" href="#">Toan</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+                    <div class="col d-flex flex-column">
 
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-custom-search" type="submit"><i class="fas fa-search"></i></button>
-                    </form>
+                        <div class="row">
+                            <div class=" col d-flex justify-content-end ">
+
+                                <a href="#" class="shopping-cart">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="user"><i class="fas fa-user-alt" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="d-flex justify-content-end">
+                                <button class="navbar-toggler w-auto " type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                            <div class="collapse navbar-collapse my-1" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active fw-bold" aria-current="page" href="#">TRANG CHỦ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active fw-bold" aria-current="page" href="#">GIỚI THIỆU</a>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            SẢN PHẨM
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Cọ</a></li>
+                                            <li><a class="dropdown-item" href="#">Toan</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                                <form class="d-flex justify-content-end form-search-box" role="search">
+                                    <input class="form-control me-2 search-box" type="search" placeholder="Search"
+                                        aria-label="Search" />
+                                    <button class="btn btn-custom-search" type="submit"><i
+                                            class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
+
             </div>
         </nav>
     </header>
 
 
-    <main class="mt-5 pt-4">
+    <main>
+
+
+        
+
+
         <!-- scroll: thanh trượt cạnh phải -->
         <div class="container-fluid">
             <!-- Container tạo khung chứa, -fluid giãn điều màn hình -->
@@ -183,7 +219,7 @@
     </main>
 
     <footer>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-sm-6">
                     <h3>Liên lạc</h3>
@@ -229,28 +265,7 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
-                    <!-- <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-facebook" aria-hidden="true"></i> Facebook
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-youtube" aria-hidden="true"></i> Youtube
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-tiktok" aria-hidden="true"></i> Tiktok
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
-                            </a>
-                        </li>
-                    </ul> -->
+
                 </div>
             </div>
 
