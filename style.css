@@ -34,7 +34,7 @@ h1 {
 
 
 .custom-navbar .navbar-nav .nav-link,
-.btn-custom-search, .fa-shopping-cart, .fa-user-alt {
+.btn-custom-search, .fa-shopping-cart, .fa-user-alt , .navbar-toggler{
     background-color: rgb(255, 205, 53);
     color: rgb(62, 196, 187);
     /* đổi sang màu bạn muốn */
@@ -43,8 +43,8 @@ h1 {
     padding: 5px 12px;
     /* tạo khoảng cách giống nút */
     margin: 4px 5px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
 
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
     transition: 0.3s ease-out;
 }
 
@@ -61,7 +61,7 @@ h1 {
     background-color: rgb(62, 196, 187);
     color: rgb(255, 205, 53);
 
-    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.16);
     transition: 0.3s ease-out;
 }
 
@@ -88,6 +88,13 @@ h1 {
 .search-box{
     height: 50%;
 }
+
+/* NAVBAR TOGGLER */
+.navbar-toggler{
+    padding: 2px 8px;
+    margin: 5px 0;
+}
+
 
 
 /* =========================== FOOTER =========================== */
