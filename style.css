@@ -23,7 +23,6 @@ h1 {
     }
 }
 
-
 /* NAVBAR */
 .custom-navbar {
     animation: slideInDown 0.5s ease;
@@ -32,9 +31,9 @@ h1 {
     padding: 0;
 }
 
-
 .custom-navbar .navbar-nav .nav-link,
-.btn-custom-search, .fa-shopping-cart, .fa-user-alt , .navbar-toggler{
+.btn-custom-search,
+.navbar-toggler {
     background-color: rgb(255, 205, 53);
     color: rgb(62, 196, 187);
     /* đổi sang màu bạn muốn */
@@ -48,21 +47,30 @@ h1 {
     transition: 0.3s ease-out;
 }
 
-.fa-shopping-cart, .fa-user-alt{
+.fa-shopping-cart,
+.fa-user-alt {
     width: 34px;
     height: 34px;
-   margin: 4px 5px;
+    margin: 0 5px;
+    margin-top: 8px;
     padding: 8px 8px;
-
 }
 
 .custom-navbar .navbar-nav .nav-link:hover,
-.btn-custom-search:hover, .fa-shopping-cart:hover, .fa-user-alt:hover{
+.btn-custom-search:hover,
+.fa-shopping-cart:hover,
+.fa-user-alt:hover {
     background-color: rgb(62, 196, 187);
     color: rgb(255, 205, 53);
 
     box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.16);
     transition: 0.3s ease-out;
+}
+
+/* NAVBAR TOGGLER */
+.navbar-toggler {
+    padding: 2px 8px;
+    margin: 5px 0;
 }
 
 /* LOGO */
@@ -72,27 +80,20 @@ h1 {
     justify-content: center;
 }
 
-/* Từ khoang 768px -- 930px thì ô tìm kiếm sẽ nhỏ lại */
-@media (max-width: 930px ) and (min-width: 768px) {
-    .form-search-box{
-        width: 150px;
-    }
-}
-
-.form-search-box{
+.form-search-box {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 240px;
 }
 
-.search-box{
+.search-box {
     height: 50%;
 }
 
-/* NAVBAR TOGGLER */
-.navbar-toggler{
-    padding: 2px 8px;
-    margin: 5px 0;
+/* DROPDOWN */
+.dropdown-menu{
+    background-color: rgb(62, 196, 187);
 }
 
 
@@ -120,11 +121,11 @@ footer h3 {
 .social {
     border: 3px solid rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    
+
     height: 45px;
     width: 45px;
     transition: all 0.3s ease-out;
-    display:flex;
+    display: flex;
     float: left;
     align-items: center;
     justify-content: center;
@@ -132,27 +133,27 @@ footer h3 {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
     font-size: 1.5rem;
-    
+
 }
 
-.social:hover{
+.social:hover {
     border: 3px solid rgba(255, 255, 255, 0.3)
 }
 
-.iconfa-facebook{
+.iconfa-facebook {
     background-color: #1379b1;
 }
 
 
-.iconfa-youtube{
+.iconfa-youtube {
     background-color: #cd0246;
 }
 
 .iconfa-tiktok {
-    background-color: rgba(0, 0, 0, 0.8 );
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.iconfa-instagram{
+.iconfa-instagram {
     background-color: #d33680;
 }
 
