@@ -1,14 +1,98 @@
+/* =========================== DUNG CHUNG =========================== */
 a {
     text-decoration: none;
     color: white;
+}
 
+
+
+/* NUT BAM */
+.button {
+    background: #ffcd35;
+    color: #fe5054;
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #3ec4bb;
+    color: #ffcd35;
+}
+
+
+/* Khung */
+.khung {
+    border-radius: 10px;
+    border: 2px solid #fe97ca;
+    box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+/* IMG Scale up */
+.img:hover {
+    transform: scale(1.05);
+}
+
+/* Thẻ lable nếu có xài */
+label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    color: #fe5054;
+    text-transform: uppercase;
 }
 
 h1 {
-    color: #fe5054;
+    font-size: 40px;
 }
 
+h2 {
+    font-size: 34px;
+}
 
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: justify;
+
+}
 
 /* =========================== HEADER =========================== */
 
@@ -54,12 +138,20 @@ h1 {
     margin: 0 5px;
     margin-top: 8px;
     padding: 8px 8px;
+    color: white;
+}
+
+.user {
+    margin: 8px 5px 5px;
+    padding: 5px;
+    font-size: 16px;
 }
 
 .custom-navbar .navbar-nav .nav-link:hover,
 .btn-custom-search:hover,
 .fa-shopping-cart:hover,
-.fa-user-alt:hover {
+.fa-user-alt:hover,
+.user:hover {
     background-color: rgb(62, 196, 187);
     color: rgb(255, 205, 53);
 
@@ -80,6 +172,7 @@ h1 {
     justify-content: center;
 }
 
+
 .form-search-box {
     display: flex;
     align-items: center;
@@ -87,12 +180,25 @@ h1 {
     width: 240px;
 }
 
+@media (max-width:576px) {
+    .form-search-box {
+        width: 170px;
+    }
+
+    .user {
+        font-size: 12px;
+        padding: 2px;
+        margin: 10px 2px 5px;
+    }
+}
+
 .search-box {
     height: 50%;
 }
 
+
 /* DROPDOWN */
-.dropdown-menu{
+.dropdown-menu {
     background-color: rgb(62, 196, 187);
 }
 
@@ -109,13 +215,12 @@ footer ul {
     list-style: none;
 }
 
-
-
 footer h3 {
     margin-top: 5px;
+    color: white;
 }
 
-/* footer end */
+
 
 /* SOCIAL MEDIA */
 .social {
@@ -189,7 +294,114 @@ footer h3 {
 
 
 /* =========================== TRANG CHỦ =========================== */
-.tintuc {
-    text-align: justify;
-    padding: 20px;
+#carouselExampleIndicators {
+    margin: 1rem;
 }
+
+
+/* =========================== SẢN PHẨM =========================== */
+
+/*Khung sản phẩm*/
+.sanpham {
+    border: 1px solid #fe97ca;
+    border-radius: 10px;
+
+    padding: 12px;
+    height:  100%;
+    /* Đảm bảo các thẻ sản phẩm bằng chiều cao nhau */
+}
+
+/*Khuôn ảnh*/
+.sanpham-anh {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+                            /* Cắt bỏ phần ảnh thừa */
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.sanpham:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    border-width: 2.5px;
+}
+
+
+.sanpham-anh img {
+    padding: 20px;
+    object-fit: cover;
+    /* Cắt ảnh vừa khít khung vuông, không méo hình */
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.sanpham:hover .sanpham-anh img {
+    transform: scale(1.05);
+}
+
+/*Tên sản phẩm*/
+.sanpham-ten {
+    color: #000;
+    font-weight: none;
+    margin-bottom: 15px;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    height: 40px;
+    /* Cố định chiều cao 2 dòng */
+    overflow: hidden;
+    display: -webkit-box;
+    display: box;
+    /* Fallback for non-webkit browsers */
+    -webkit-line-clamp: 2;
+    /* Hiển thị tối đa 2 dòng, dư thì cắt bớt */
+    line-clamp: 2;
+    /* Standard property for compatibility */
+    -webkit-box-orient: vertical;
+    margin-bottom: 8px;
+}
+
+.sanpham-icon:hover {
+    color: #fe97ca;
+    transform: scale(1.2);
+}
+
+
+.sanpham-gia-hang {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    margin-top: 4px;
+    color: #fe5054;
+}
+
+.sanpham-gia {
+    font-weight: 700;
+    font-size: 1rem;
+
+    margin-bottom: 0;
+}
+
+
+/*.sanpham{
+    padding: 0 5px;
+    display: block;
+    flex-wrap: nowrap;
+    align-content: end;
+}
+
+.sanpham-anh img, .sanpham-ten {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sanpham-gia-hang {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(254, 151, 202);
+  align-items: baseline;
+  margin-top: auto;
+} */
