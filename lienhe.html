@@ -126,7 +126,7 @@
 
                 <!-- BÊN TRÁI: Khung chứa thông tin liên hệ và Form nhập thông tin -->
                 <!-- col-lg-6: Trên màn hình máy tính lớn chiếm 6/12 cột (nửa màn hình), mobile chiếm hết 100% -->
-                <div class="col-lg-6 khung p-4">
+                <div class="col-lg-6 khung p-4 lienhe-left">
 
                     <!-- Phần hiển thị thông tin Địa chỉ, SĐT, Email -->
                     <div class="lienhe-info">
@@ -154,15 +154,15 @@
                             onsubmit="return contact(this);">
 
                             <div class="lienhe-item my-2">
-                                <label for="ContacUsertName">Họ tên *</label>
-                                <input type="text" name="name" id="ContacUsertName" class="form-control"
+                                <label for="ContactUserName">Họ tên *</label>
+                                <input type="text" name="name" id="ContactUserName" class="form-control"
                                     placeholder="Họ tên">
                             </div>
 
                             <div class="lienhe-item my-2">
                                 <label for="ContactNumber">Số điện thoại *</label>
                                 <input type="tel" name="number" id="ContactNumber" class="form-control"
-                                    placeholder="Số điện thoại">
+                                    placeholder="Số điện thoại" pattern="0[0-9]{9}" maxlength="10">
                             </div>
 
                             <div class="lienhe-item my-2">
@@ -175,12 +175,8 @@
                             <div class="lienhe-item my-2">
                                 <label for="ContactContent">Nội dung *</label>
 
-                                <textarea class="form-control" id="ContactContent" placeholder="Nội dung*"></textarea>
+                                <textarea class="form-control" name="content" id="ContactContent" placeholder="Nội dung*"></textarea>
                             </div>
-
-
-
-
 
                             <input type="submit" value=" Gửi liên hệ của bạn" class="button my-2">
                         </form>
@@ -191,7 +187,7 @@
                 </div>
 
                 <!-- BÊN PHẢI: Khung chứa Bản đồ Google Maps -->
-                <div class="col-lg-6 px-0 px-lg-3">
+                <div class="col-lg-6 px-0 px-lg-3 lienhe-right">
 
                     <div class="lienhe-map">
                         <!-- iframe: Dùng để nhúng trực tiếp bản đồ Đại học Cần Thơ từ Google Maps vào trang web -->

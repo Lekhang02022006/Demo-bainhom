@@ -427,3 +427,36 @@ footer h3 {
   height: 15px;
   cursor: pointer;
 }
+
+.dangky, .dangnhap {
+    animation: slideInDown 0.5s ease;
+}
+
+/* =========================== LIÊN HỆ =========================== */
+@keyframes slideInRight{
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.lienhe-left {
+    animation: slideInRight 0.5s ease;
+}
+
+@keyframes slideInLeft{
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.lienhe-right {
+    animation: slideInLeft 0.5s ease;
+}
