@@ -1,35 +1,43 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi"> <!-- Khai báo ngôn ngữ của trang web là tiếng Việt -->
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- Định dạng mã hóa ký tự UTF-8 để hiển thị tiếng Việt không bị lỗi font -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Giúp trang web hiển thị co giãn tốt trên mọi thiết bị (Responsive) -->
+
+    <!-- Nhúng thư viện Font Awesome để sử dụng các icon (biểu tượng) như giỏ hàng, điện thoại, bản đồ... -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <!-- BẮT ĐẦU: Cấu hình Favicon (Biểu tượng nhỏ hiển thị trên tab của trình duyệt) cho các thiết bị khác nhau -->
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link class="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-    <link class="button" rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="manifest" href="img/favicon/manifest.json"> <!-- Tệp manifest định nghĩa ứng dụng web -->
+    <meta name="msapplication-TileColor" content="#ffffff"> <!-- Màu nền ô ứng dụng trên Windows -->
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff"> <!-- Màu thanh địa chỉ trên trình duyệt di động -->
+    <!-- KẾT THÚC: Cấu hình Favicon -->
 
+    <!-- Nhúng file CSS của thư viện Bootstrap 5 để dàn trang và sử dụng các component có sẵn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <!-- Nhúng file CSS cá nhân để tự custom giao diện theo ý muốn -->
     <link rel="stylesheet" href="style.css">
 
-    <title>Đăng Ký | Góc Họa Sĩ</title>
+    <!-- Tiêu đề của trang web hiển thị trên tab trình duyệt -->
+    <title>Trang Chủ | Góc Họa Sĩ</title>
 </head>
 
 
@@ -109,77 +117,116 @@
 
     <main>
 
-        <!-- Container Bootstrap -->
         <div class="container-fluid">
+            <!-- KHU VỰC TRANG LIÊN HỆ CHÍNH -->
+            <!-- my-5: Tạo khoảng cách lề trên và lề dưới (margin-top & margin-bottom) -->
+            <!-- <div class="container my-5"> -->
+            <!-- g-4: Khoảng cách giữa các cột trong row (gutter) -->
+            <div class="row g-3 my-5 px-sm-1">
 
-            <!-- Canh giữa theo chiều ngang -->
-            <div class="row justify-content-center my-5">
+                <!-- BÊN TRÁI: Khung chứa thông tin liên hệ và Form nhập thông tin -->
+                <!-- col-lg-6: Trên màn hình máy tính lớn chiếm 6/12 cột (nửa màn hình), mobile chiếm hết 100% -->
+                <div class="col-lg-6 khung p-4">
 
-                <!-- Chia cột -->
-                <div class="col-sm-10 col-md-8 col-lg-6 khung dangky p-4">
+                    <!-- Phần hiển thị thông tin Địa chỉ, SĐT, Email -->
+                    <div class="lienhe-info">
+                        <h2>LIÊN HỆ</h2>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> <!-- Icon bản đồ -->
+                             Khu II, Đường 3/2, P. Xuân Khánh, TP. Cần Thơ
+                        </p>
+                        <p>
+                            <i class="fas fa-phone-alt"></i> <!-- Icon điện thoại -->
+                            Số điện thoại: 0349247635
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i> <!-- Icon lá thư -->
+                             khangb2405036@student.ctu.edu.vn
+                        </p>
+                    </div>
 
-                    <!-- Form đăng nhập -->
-                    <form action="" method="post" enctype="multipart/form-data" onsubmit="return signup(this);">
-                        <fieldset>
-                            <h2>ĐĂNG KÝ</h2>
+                    <div class="lienhe-form">
+                        <h5>LIÊN HỆ VỚI CHÚNG TÔI</h5>
 
-                            <div class="dangky-item my-2">
-                                <label for="SignupUserEmail">Email *</label>
+                        <!-- Form để người dùng nhập nội dung và gửi phản hồi -->
+                        <!-- onsubmit: Gọi hàm javascript contact() trong file script.js để kiểm tra dữ liệu trước khi gửi -->
+                        <form action="" method="post" enctype="application/x-www-form-urlencoded"
+                            onsubmit="return contact(this);">
+
+                            <div class="lienhe-item my-2">
+                                <label for="ContacUsertName">Họ tên *</label>
+                                <input type="text" name="name" id="ContacUsertName" class="form-control"
+                                    placeholder="Họ tên">
+                            </div>
+
+                            <div class="lienhe-item my-2">
+                                <label for="ContactNumber">Số điện thoại *</label>
+                                <input type="tel" name="number" id="ContactNumber" class="form-control"
+                                    placeholder="Số điện thoại">
+                            </div>
+
+                            <div class="lienhe-item my-2">
+                                <label for="ContactUserEmail">Email *</label>
                                 <!-- type email sẽ kiếm tra email cho mình luôn -->
-                                <input type="email" name="email" id="SignupUserEmail" class="form-control"
+                                <input type="email" name="email" id="ContactUserEmail" class="form-control"
                                     placeholder="Email" autocomplete="email">
                             </div>
 
-                            <div class="dangky-item my-2">
-                                <label for="SignupUserPassword">Mật khẩu *</label>
-                                <input type="password" name="psw" id="SignupUserPassword" class="form-control"
-                                    placeholder="Mật khẩu" autocomplete="current-password">
+                            <div class="lienhe-item my-2">
+                                <label for="ContactContent">Nội dung *</label>
 
-                            </div>
-
-                            <div class="dangky-item my-2">
-                                <label for="SignupUserPassword2">Nhập lại mật khẩu *</label>
-                                <input type="password" name="psw2" id="SignupUserPassword2" class="form-control"
-                                    placeholder="Mật khẩu" autocomplete="current-password">
+                                <textarea class="form-control" id="ContactContent" placeholder="Nội dung*"></textarea>
                             </div>
 
 
-                            <div class="dangky-item my-2">
-                                <label for="Avatar">Ảnh đại diện *</label>
-                                <!-- accpet = "image/*" chọn tất cả các loại file ảnh -->
-                                <input type="file" name="Avatar" id="Avatar" accept="image/*" placeholder="chọn Ảnh">
-                            </div>
 
-                            <div class="dangky-item my-2">
-                                <input type="checkbox" name="policy" id="policy" class="dangky-checkbox" required>
-                                <label for="policy"> Đồng ý với <a
-                                        href="https://bangvietbavico.edu.vn/wp-content/uploads/2023/04/bang-dan-pp-5-dieu-bac-ho-day-2.jpg"
-                                        target="_blank">Điều khoản & Quyền riêng </a>từ của chúng tôi</label>
-                            </div>
 
-                            <input type="submit" value="Đăng ký" class="button my-2">
-                        </fieldset>
-                    </form>
+
+                            <input type="submit" value=" Gửi liên hệ của bạn" class="button my-2">
+                        </form>
+                    </div>
+
+
+
                 </div>
+
+                <!-- BÊN PHẢI: Khung chứa Bản đồ Google Maps -->
+                <div class="col-lg-6 px-0 px-lg-3">
+
+                    <div class="lienhe-map">
+                        <!-- iframe: Dùng để nhúng trực tiếp bản đồ Đại học Cần Thơ từ Google Maps vào trang web -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.699617260874!2d105.7680404!3d10.0299337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBD4bqnbiBUaMah!5e0!3m2!1svi!2s"
+                            width="100%" height="560" class="khung">
+                        </iframe>
+                    </div>
+
+                </div>
+
             </div>
         </div>
+
+        </div>
     </main>
+
 
     <footer>
         <div class="container">
             <div class="row">
+
+                <!-- Cột thông tin liên lạc nhanh dưới footer -->
                 <div class="col-sm-6">
                     <h3>Liên lạc</h3>
                     <ul>
                         <li>
-                            <a href="https://www.google.com/maps/place/%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%E1%BA%A7n+Th%C6%A1/@10.0299337,105.7680404,1057m/data=!3m2!1e3!4b1!4m6!3m5!1s0x31a0895a51d60719:0x9d76b0035f6d53d0!8m2!3d10.0299337!4d105.7706153!16s%2Fm%2F02r6wmy?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
+                            <a href="https://www.google.com/maps/place/%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%E1%BA%A7n+Th%C6%A1/..."
                                 target="_blank">
                                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Khu 2, Đ. 3/2, P.Ninh Kiều, TP.
                                 Cần Thơ
                             </a>
                         </li>
                         <li>
-                            <a href="tel: 0349247635">
+                            <a href="tel:0349247635">
                                 <i class="fas fa-phone-alt" aria-hidden="true"></i> Tel: +84349247635
                             </a>
                         </li>
@@ -189,7 +236,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="mailto: anhb2404974@student.ctu.edu.vn">
+                            <a href="mailto:khangb2405036@student.ctu.edu.vn">
                                 <i class="fas fa-mail-bulk" aria-hidden="true"></i> Mail:
                                 khangb2405036@student.ctu.edu.vn
                             </a>
@@ -197,32 +244,53 @@
                     </ul>
                 </div>
 
+                <!-- Cột liên kết mạng xã hội -->
                 <div class="col-sm">
                     <h3>Mạng xã hội</h3>
                     <div class="d-flex justify-content-center">
-                        <a href="" class="social iconfa-facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="" class="social iconfa-youtube" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="" class="social iconfa-tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
-                        <a href="" class="social iconfa-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <!-- Các nút mạng xã hội dùng icon Font Awesome thương hiệu (fab) -->
+                        <a href="" class="social iconfa-facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="" class="social iconfa-youtube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="" class="social iconfa-tiktok" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="" class="social iconfa-instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
-        <hr>
+
+        <hr> <!-- Đường kẻ ngang phân cách -->
+
+        <!-- Dòng thông tin bản quyền và lưu ý bài tập nhóm -->
         <div class="d-sm-flex d-block footer-end justify-content-center align-items-center text-center py-2">
-            <p class="mb-0">© Đây là bài tập của nhóm 02.</p>
+            <p class="mb-0">&copy; Đây là bài tập của nhóm 02.</p>
             <p class="mb-0"> Không phải là trang web mua bán !!! 🐳🐳🐳 </p>
         </div>
+
+        <!-- Nút cuộn nhanh lên đầu trang (Back to top button) -->
+        <!-- Các thuộc tính uk-totop và uk-scroll là thuộc tính của thư viện UIkit (nếu bạn có dùng kèm) -->
         <a id="sticky-to-top" href="#" uk-totop uk-scroll class="uk-icon uk-totop to-top">
             <i class="fas fa-chevron-up"></i>
         </a>
+
     </footer>
 
+    <!-- Nhúng file Javascript của thư viện Bootstrap 5 (xử lý menu đóng mở, các hiệu ứng động) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
+    <!-- Nhúng file Javascript cá nhân dùng để viết mã xử lý form hoặc các sự kiện trên trang -->
     <script type="text/javascript" src="script.js"></script>
+
 </body>
 
 </html>
