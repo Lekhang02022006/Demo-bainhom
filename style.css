@@ -135,8 +135,7 @@ img {
     transition: 0.3s ease-out;
 }
 
-.fa-shopping-cart,
-.fa-user-alt {
+.fa-shopping-cart {
     width: 34px;
     height: 34px;
     margin: 0 5px;
@@ -224,7 +223,9 @@ footer h3 {
     color: white;
 }
 
-
+.fa-phone-alt{
+    transform: scaleX(-100%);
+}
 
 /* SOCIAL MEDIA */
 .social {
@@ -409,3 +410,22 @@ footer h3 {
   align-items: baseline;
   margin-top: auto;
 } */
+
+/* =========================== ĐĂNG NHẬP =========================== */
+.dangnhap a, .dangky a {
+    color: black;
+    margin-top: 5px;
+}
+
+.dangnhap h2, .dangky h2 {
+    text-align: center;
+}
+
+.dangnhap-checkbox {
+  accent-color:rgb(62, 196, 187) ;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+/* =========================== ĐĂNG KÝ =========================== */
