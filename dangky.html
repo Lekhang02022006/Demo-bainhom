@@ -148,13 +148,15 @@
 
                             <div class="dangky-item my-2">
                                 <label for="Avatar">Ảnh đại diện *</label>
-                                <input type="file" name="Avatar">
+                                <!-- accpet = "image/*" chọn tất cả các loại file ảnh -->
+                                <input type="file" name="Avatar" id="Avatar" accept="image/*" placeholder="chọn Ảnh">
                             </div>
 
                             <div class="dangky-item my-2">
-                                <label for="policy"><input type="checkbox" name="policy" id="policy"
-                                        class="dangnhap-checkbox"> Đồng ý với Điều khoản & Quyền riêng từ của chúng
-                                    tôi</label>
+                                <input type="checkbox" name="policy" id="policy" class="dangky-checkbox" required>
+                                <label for="policy"> Đồng ý với <a
+                                        href="https://bangvietbavico.edu.vn/wp-content/uploads/2023/04/bang-dan-pp-5-dieu-bac-ho-day-2.jpg"
+                                        target="_blank">Điều khoản & Quyền riêng </a>từ của chúng tôi</label>
                             </div>
 
                             <input type="submit" value="Đăng ký" class="button my-2">

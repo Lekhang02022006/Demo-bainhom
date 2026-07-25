@@ -411,7 +411,7 @@ footer h3 {
   margin-top: auto;
 } */
 
-/* =========================== ĐĂNG NHẬP =========================== */
+/* =========================== ĐĂNG NHẬP / KÝ =========================== */
 .dangnhap a, .dangky a {
     color: black;
     margin-top: 5px;
@@ -421,11 +421,9 @@ footer h3 {
     text-align: center;
 }
 
-.dangnhap-checkbox {
+.dangnhap-checkbox, .dangky-checkbox {
   accent-color:rgb(62, 196, 187) ;
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
-
-/* =========================== ĐĂNG KÝ =========================== */
