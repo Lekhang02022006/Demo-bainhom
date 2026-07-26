@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="vi"> <!-- Khai báo ngôn ngữ của trang web là tiếng Việt -->
+<html lang="vi">
 
 <head>
-    <meta charset="UTF-8"> <!-- Định dạng mã hóa ký tự UTF-8 để hiển thị tiếng Việt không bị lỗi font -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Giúp trang web hiển thị co giãn tốt trên mọi thiết bị (Responsive) -->
-
-    <!-- Nhúng thư viện Font Awesome để sử dụng các icon (biểu tượng) như giỏ hàng, điện thoại, bản đồ... -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- BẮT ĐẦU: Cấu hình Favicon (Biểu tượng nhỏ hiển thị trên tab của trình duyệt) cho các thiết bị khác nhau -->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-    <link class="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
@@ -23,26 +20,27 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json"> <!-- Tệp manifest định nghĩa ứng dụng web -->
-    <meta name="msapplication-TileColor" content="#ffffff"> <!-- Màu nền ô ứng dụng trên Windows -->
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff"> <!-- Màu thanh địa chỉ trên trình duyệt di động -->
-    <!-- KẾT THÚC: Cấu hình Favicon -->
+    <meta name="theme-color" content="#ffffff">
 
-    <!-- Nhúng file CSS của thư viện Bootstrap 5 để dàn trang và sử dụng các component có sẵn -->
+    <!-- css boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <!-- Nhúng file CSS cá nhân để tự custom giao diện theo ý muốn -->
+    <!-- mycss -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Tiêu đề của trang web hiển thị trên tab trình duyệt -->
-    <title>Liên Hệ | Góc Họa Sĩ</title>
+    <!-- ĐỔI CHỔ NÀY -->
+    <title>Giới Thiệu | Góc Họa Sĩ</title>
 </head>
 
 
 <body>
     <header class=" sticky-top d-block">
+
+
 
         <nav class="navbar navbar-expand-lg custom-navbar">
 
@@ -50,7 +48,7 @@
                 <div class="row">
                     <div class="col-5 col-sm-4 col-md-3 col-xl-2 logo">
                         <a class="navbar-brand consectetur-fluid" href="index.html">
-                            <img src="img/logo.png" alt="" width="100%" id="logo"></a>
+                            <img src="img/logo.png" alt="" id="logo"></a>
                     </div>
 
                     <div class="col-7 col-sm-8 col-md col-xl d-flex flex-column">
@@ -100,8 +98,8 @@
                                 </ul>
                                 <form class="d-flex justify-content-end form-search-box ms-auto" role="search">
                                     <input class="form-control me-2 search-box" type="search" placeholder="Search"
-                                        aria-label="Search" id="input-search" />
-                                    <button class="btn btn-custom-search" type="submit" id="btn-search"><i
+                                        aria-label="Search" />
+                                    <button class="btn btn-custom-search" type="submit"><i
                                             class="fas fa-search"></i></button>
                                 </form>
                             </div>
@@ -115,114 +113,82 @@
         </nav>
     </header>
 
+
+
     <main>
-
         <div class="container-fluid">
-            <!-- KHU VỰC TRANG LIÊN HỆ CHÍNH -->
-            <!-- my-5: Tạo khoảng cách lề trên và lề dưới (margin-top & margin-bottom) -->
-            <!-- <div class="container my-5"> -->
-            <!-- g-4: Khoảng cách giữa các cột trong row (gutter) -->
-            <div class="row g-3 my-5 px-sm-1">
-
-                <!-- BÊN TRÁI: Khung chứa thông tin liên hệ và Form nhập thông tin -->
-                <!-- col-lg-6: Trên màn hình máy tính lớn chiếm 6/12 cột (nửa màn hình), mobile chiếm hết 100% -->
-                <div class="col-lg-6 khung p-4 lienhe-left">
-
-                    <!-- Phần hiển thị thông tin Địa chỉ, SĐT, Email -->
-                    <div class="lienhe-info">
-                        <h2>LIÊN HỆ</h2>
-                        <p>
-                            <i class="fas fa-map-marker-alt"></i> <!-- Icon bản đồ -->
-                             Khu II, Đường 3/2, P. Xuân Khánh, TP. Cần Thơ
-                        </p>
-                        <p>
-                            <i class="fas fa-phone-alt"></i> <!-- Icon điện thoại -->
-                            Số điện thoại: 0349247635
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope"></i> <!-- Icon lá thư -->
-                             khangb2405036@student.ctu.edu.vn
-                        </p>
-                    </div>
-
-                    <div class="lienhe-form">
-                        <h5>LIÊN HỆ VỚI CHÚNG TÔI</h5>
-
-                        <!-- Form để người dùng nhập nội dung và gửi phản hồi -->
-                        <!-- onsubmit: Gọi hàm javascript contact() trong file script.js để kiểm tra dữ liệu trước khi gửi -->
-                        <form action="" method="post" enctype="application/x-www-form-urlencoded"
-                            onsubmit="return contact(this);">
-
-                            <div class="lienhe-item my-2">
-                                <label for="ContactUserName">Họ tên *</label>
-                                <input type="text" name="name" id="ContactUserName" class="form-control"
-                                    placeholder="Họ tên">
-                            </div>
-
-                            <div class="lienhe-item my-2">
-                                <label for="ContactNumber">Số điện thoại *</label>
-                                <input type="tel" name="number" id="ContactNumber" class="form-control"
-                                    placeholder="Số điện thoại" pattern="0[0-9]{9}" maxlength="10">
-                            </div>
-
-                            <div class="lienhe-item my-2">
-                                <label for="ContactUserEmail">Email *</label>
-                                <!-- type email sẽ kiếm tra email cho mình luôn -->
-                                <input type="email" name="email" id="ContactUserEmail" class="form-control"
-                                    placeholder="Email" autocomplete="email">
-                            </div>
-
-                            <div class="lienhe-item my-2">
-                                <label for="ContactContent">Nội dung *</label>
-
-                                <textarea class="form-control" name="content" id="ContactContent" placeholder="Nội dung*"></textarea>
-                            </div>
-
-                            <input type="submit" value=" Gửi liên hệ của bạn" class="button my-2">
-                        </form>
-                    </div>
-
-
-
+            
+            <!-- "GỐC" HỌA SĨ -->
+            <div class="row g-3 my-4 justify-content-center">
+                <h3 class="border-bottom col-sm-10">"Gốc" Họa Sĩ</h3>
+                <div class="col-8 col-sm-5  col-lg-3 mx-5">
+                    <img src="img/gioithieu/img1.jpg" alt="" class="khung">
                 </div>
 
-                <!-- BÊN PHẢI: Khung chứa Bản đồ Google Maps -->
-                <div class="col-lg-6 px-0 px-lg-3 lienhe-right">
-
-                    <div class="lienhe-map">
-                        <!-- iframe: Dùng để nhúng trực tiếp bản đồ Đại học Cần Thơ từ Google Maps vào trang web -->
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.699617260874!2d105.7680404!3d10.0299337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBD4bqnbiBUaMah!5e0!3m2!1svi!2s"
-                            width="100%" height="560" class="khung">
-                        </iframe>
-                    </div>
-
+                <div class="col-12 col-sm-10 col-md-5">
+                    <p class="gioithieu-noidung"><b>"Gốc" họa sĩ</b> – Bạn có nhớ cảm giác hồi hộp khi mở hộp chì màu 12
+                        cây đầu tiên ngày còn học tiểu học? Đó không chỉ là những cây bút, mà là cánh cửa đầu tiên mở ra
+                        thế giới của trí tưởng tượng. "Gốc" của mọi họa sĩ bắt đầu từ thứ giản dị nhất: một cây cọ, vài
+                        gam màu, và ước mơ được ghi lại những gì mắt thấy, tai nghe hay những điều kỳ diệu trong đầu.
+                        Chúng mình hiểu điều đó, bởi mỗi chúng mình cũng từng là những đứa trẻ say sưa tô vẽ trên trang
+                        giấy trắng.</p>
                 </div>
-
             </div>
-        </div>
+
+            <div class="row g-3 my-4 justify-content-center">
+                <h3 class="border-bottom col-sm-10">Góc họa sĩ</h3>
+                
+
+                <div class="col-12 col-sm-10 col-md-5">
+                    <p class="gioithieu-noidung"><b>"Góc Họa Sĩ"</b> ra đời từ chính ước mơ ấy, và mong muốn giản dị: mang đến
+                        những dụng cụ vẽ chất lượng với giá cả phải chăng, để bất kỳ ai, dù mới bắt đầu hay đã vững tay,
+                        đều có thể tiếp tục theo đuổi đam mê. Với số vốn ít ỏi ban đầu là 5 chiếc laptop tổng là 100 triệu đồng, nhưng chúng mình có cả nhiệt
+                        huyết và tình yêu dành cho nghệ thuật. Chúng mình không bán hàng, chúng mình tiếp sức cho những
+                        ước mơ.</p>
+                </div>
+                <div class="col-8 col-sm-5  col-lg-3 mx-5">
+                    <img src="img/gioithieu/img2.jpg" alt="" class="khung">
+                </div>
+            </div>
+
+            <div class="row g-3 my-4 justify-content-center">
+                <h3 class="border-bottom col-sm-10">GÓC HỌA "SĨ"</h3>
+                <div class="col-8 col-sm-5  col-lg-3 mx-5">
+                    <img src="img/gioithieu/img3.jpg" alt="" class="khung">
+                </div>
+
+                <div class="col-12 col-sm-10 col-md-5">
+                    <p class="gioithieu-noidung">Và hơn cả một cửa hàng, <b>Góc Họa "Sĩ"</b> là nơi chúng mình muốn trưng bày
+                        những tác phẩm của chính các bạn – những người đã tin tưởng và sử dụng màu của cửa hàng. "Sĩ" ở
+                        đây không phải để khoe khoang, mà là để thể hiện, để chia sẻ, để mỗi người có một không gian
+                        riêng để kể câu chuyện của mình theo cách mình muốn. Mỗi bức tranh đều là một thế giới, và chúng
+                        mình luôn sẵn sàng để nâng đỡ những thế giới ấy lên.</p>
+                </div>
+            </div>
+
 
         </div>
+
+
+
+
     </main>
-
 
     <footer>
         <div class="container">
             <div class="row">
-
-                <!-- Cột thông tin liên lạc nhanh dưới footer -->
                 <div class="col-sm-6">
                     <h3>Liên lạc</h3>
                     <ul>
                         <li>
-                            <a href="https://www.google.com/maps/place/%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%E1%BA%A7n+Th%C6%A1/..."
+                            <a href="https://www.google.com/maps/place/%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%E1%BA%A7n+Th%C6%A1/@10.0299337,105.7680404,1057m/data=!3m2!1e3!4b1!4m6!3m5!1s0x31a0895a51d60719:0x9d76b0035f6d53d0!8m2!3d10.0299337!4d105.7706153!16s%2Fm%2F02r6wmy?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
                                 target="_blank">
                                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Khu 2, Đ. 3/2, P.Ninh Kiều, TP.
                                 Cần Thơ
                             </a>
                         </li>
                         <li>
-                            <a href="tel:0349247635">
+                            <a href="tel: 0349247635">
                                 <i class="fas fa-phone-alt" aria-hidden="true"></i> Tel: +84349247635
                             </a>
                         </li>
@@ -232,7 +198,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:khangb2405036@student.ctu.edu.vn">
+                            <a href="mailto: anhb2404974@student.ctu.edu.vn">
                                 <i class="fas fa-mail-bulk" aria-hidden="true"></i> Mail:
                                 khangb2405036@student.ctu.edu.vn
                             </a>
@@ -240,11 +206,9 @@
                     </ul>
                 </div>
 
-                <!-- Cột liên kết mạng xã hội -->
                 <div class="col-sm">
                     <h3>Mạng xã hội</h3>
                     <div class="d-flex justify-content-center">
-                        <!-- Các nút mạng xã hội dùng icon Font Awesome thương hiệu (fab) -->
                         <a href="" class="social iconfa-facebook" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
@@ -258,35 +222,33 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
+
                 </div>
-
             </div>
+
         </div>
+        <hr>
 
-        <hr> <!-- Đường kẻ ngang phân cách -->
-
-        <!-- Dòng thông tin bản quyền và lưu ý bài tập nhóm -->
         <div class="d-sm-flex d-block footer-end justify-content-center align-items-center text-center py-2">
             <p class="mb-0">&copy; Đây là bài tập của nhóm 02.</p>
             <p class="mb-0"> Không phải là trang web mua bán !!! 🐳🐳🐳 </p>
         </div>
 
-        <!-- Nút cuộn nhanh lên đầu trang (Back to top button) -->
-        <!-- Các thuộc tính uk-totop và uk-scroll là thuộc tính của thư viện UIkit (nếu bạn có dùng kèm) -->
+        <!-- uk-totop: Tạo hiệu ứng cho mũi tên -->
+        <!-- uk-scroll: giúp cuộn trang mượn hơn -->
         <a id="sticky-to-top" href="#" uk-totop uk-scroll class="uk-icon uk-totop to-top">
             <i class="fas fa-chevron-up"></i>
         </a>
 
     </footer>
 
-    <!-- Nhúng file Javascript của thư viện Bootstrap 5 (xử lý menu đóng mở, các hiệu ứng động) -->
+    <!-- js boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <!-- Nhúng file Javascript cá nhân dùng để viết mã xử lý form hoặc các sự kiện trên trang -->
+    <!-- myjs -->
     <script type="text/javascript" src="script.js"></script>
-
 </body>
 
 </html>

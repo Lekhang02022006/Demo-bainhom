@@ -303,6 +303,23 @@ footer h3 {
     margin: 1rem;
 }
 
+.trangchu-avatar {
+    border-radius: 50%;
+}
+
+.trangchu-anhcomment{
+    border-radius: 10px;
+}
+
+.fa-star{
+    color: rgb(255, 205, 53);
+}
+
+/* =========================== GIỚI THIỆU =========================== */
+.gioithieu-noidung {
+    font-size: 20px;
+}
+
 
 /* =========================== SẢN PHẨM =========================== */
 
