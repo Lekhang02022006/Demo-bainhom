@@ -4,7 +4,9 @@ a {
     color: white;
 }
 
-
+body {
+    overflow-x: hidden;
+}
 
 /* NUT BAM */
 .button {
@@ -103,11 +105,13 @@ img {
 
 @keyframes slideInDown {
     from {
-        transform: translateY(-100%);
+        transform: translateY(-30%);
+        opacity: 0;
     }
 
     to {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -135,7 +139,7 @@ header {
     margin: 4px 5px;
 
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
-    transition: 0.3s ease-out;
+    transition: 0.3s ease;
 }
 
 .fa-shopping-cart {
@@ -162,7 +166,7 @@ header {
     color: rgb(255, 205, 53);
 
     box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.16);
-    transition: 0.3s ease-out;
+    transition: 0.3s ease;
 }
 
 /* NAVBAR TOGGLER */
@@ -272,11 +276,6 @@ footer h3 {
 
 
 /* BOTTON TO TOP */
-#sticky-to-top.to-top {
-    visibility: visible;
-    z-index: 9999;
-}
-
 #sticky-to-top {
     position: fixed;
     background-color: rgb(62, 196, 187);
@@ -288,6 +287,8 @@ footer h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: visible;
+    z-index: 9999;
     /* Tạo viền */
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
 
@@ -300,11 +301,8 @@ footer h3 {
     transition: 0.3s ease-out;
 }
 
-
 /* =========================== TRANG CHỦ =========================== */
-#carouselExampleIndicators {
-    margin: 1rem;
-}
+
 
 .trangchu-avatar {
     border-radius: 50%;
@@ -321,6 +319,25 @@ footer h3 {
 /* =========================== GIỚI THIỆU =========================== */
 .gioithieu-noidung {
     font-size: 20px;
+}
+
+.gioithieu-item{
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+/* Cái mà có lớp item và odd */
+.gioithieu-item.gioithieu-odd{
+    transform: translateX(-100px);
+}
+
+.gioithieu-item.gioithieu-even{
+    transform: translateX(100px);
+}
+
+.gioithieu-item.gioithieu-visible{
+    opacity: 1;
+    transform: translate(0px) !important;
 }
 
 
@@ -361,7 +378,7 @@ footer h3 {
 }
 
 .sanpham:hover .sanpham-anh img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 /*Tên sản phẩm*/
@@ -470,21 +487,23 @@ footer h3 {
 /* =========================== LIÊN HỆ =========================== */
 @keyframes slideInRight{
     from {
-        transform: translateX(-100%);
+        transform: translateX(-100px);
+        opacity: 0;
     }
 
     to {
         transform: translateX(0);
+        opacity: 1;
     }
 }
 
 .lienhe-left {
-    animation: slideInRight 0.5s ease;
+    animation: slideInRight 0.8s ease;
 }
 
 @keyframes slideInLeft{
     from {
-        transform: translateX(100%);
+        transform: translateX(100px);
     }
 
     to {
@@ -493,7 +512,7 @@ footer h3 {
 }
 
 .lienhe-right {
-    animation: slideInLeft 0.5s ease;
+    animation: slideInLeft 0.8s ease;
 }
 
 

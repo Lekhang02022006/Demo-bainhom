@@ -1,3 +1,31 @@
+
+// =========================== GIỚI THIỆU =======================
+// Hàm kiểm tra và hiển thị nội dung
+function checkVisibility() {
+  // Lấy vị trí cuộn hiện tại
+  var scrollTop = $(window).scrollTop();
+  // Lấy chiều cao cửa sổ trình duyệt
+  var windowHeight = $(window).height();
+
+  // Duyệt qua từng nội dung
+  $('.gioithieu-item').each(function () {
+    var $item = $(this);
+
+    // Lấy vị trí của nội dung so với top trang
+    var itemTop = $item.offset().top;
+
+    // Tính toán vị trí để hiển thị
+    // Khi nội dung vào giữa màn hình (có thể điều chỉnh)
+    var triggerPoint = itemTop - windowHeight + 100;
+
+    // Nếu đã cuộn đến vị trí cần hiển thị
+    if (scrollTop > triggerPoint) {
+      // Thêm class visible để hiển thị
+      $item.addClass('gioithieu-visible');
+    }
+  })
+};
+
 // =========================== RÀNG BUỘC ĐĂNG NHẬP =======================
 
 function login(frm) {
@@ -110,89 +138,89 @@ function contact(frm) {
 // function goToCart(){
 //     window.location.href="Cart.html"
 // }
-function showCart(){
-    //create a body for later usages
-    var cartB=document.getElementById("CartBody");
-    cartB.innerHTML="";
-    var TotalPreTax=0;
+function showCart() {
+  //create a body for later usages
+  var cartB = document.getElementById("CartBody");
+  cartB.innerHTML = "";
+  var TotalPreTax = 0;
 
-    //VND converter funtion (it might not be necessary but i did it anyway)
-    var vndConvert = new Intl.NumberFormat('vi-VN',{
-        style: 'currency',
-        currency: 'VND',
-    })
+  //VND converter funtion (it might not be necessary but i did it anyway)
+  var vndConvert = new Intl.NumberFormat('vi-VN', {
+    style: 'currency',
+    currency: 'VND',
+  })
 
-    //read data from local storage and then add it to table
-    for(var i=0; i<localStorage.length;i++){
-        var key = localStorage.key(i);
-        
-        if(itemList[key]){
-            /*Declaration*/
-            var item = itemList[key];
-            var photo = item.photo;
-            var name = item.name;
-            var price = item.price;
-            var orderNumber= localStorage.getItem(key);
-            var pxo= price*orderNumber;
-            
-            /*Secret behind contents*/
-            var tr = document.createElement("tr")
-            
-            var photoCell = document.createElement("td")
-            photoCell.innerHTML="<img src='" + photo + "' class='rounf-figure' width='100px'/>"
-            var nameCell=document.createElement("td");
-            nameCell.innerHTML=name;
-            var priceCell=document.createElement("td");
-            priceCell.innerHTML=price;
-            var orderNumberCell=document.createElement("td");
-            orderNumberCell.innerHTML=orderNumber
-            var pxoCell=document.createElement("td");
-            pxoCell.innerHTML=pxo;
-            
-            /*Row's contents*/
-            tr.appendChild(photoCell)
-            tr.appendChild(nameCell);
-            tr.appendChild(orderNumberCell);
-            tr.appendChild(priceCell);
-            tr.appendChild(pxoCell);
-            
-            /*Delete button*/
-            var delink = document.createElement("a");
-            var deleteCell = document.createElement("td");
-            delink.href = "#";
-            delink.dataset.code= key;
-            var icon = document.createElement("i")
-            icon.className = "fa fa-trash icon-pink";
-            delink.appendChild(icon);
-            delink.onclick= function(){
-                removeCart(this.dataset.code);
-            }
-            deleteCell.appendChild(delink);
-            tr.appendChild(deleteCell);
-            cartB.appendChild(tr);
+  //read data from local storage and then add it to table
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
 
-            /*Calculating part 1*/
-            TotalPreTax+=pxo;
-        }
+    if (itemList[key]) {
+      /*Declaration*/
+      var item = itemList[key];
+      var photo = item.photo;
+      var name = item.name;
+      var price = item.price;
+      var orderNumber = localStorage.getItem(key);
+      var pxo = price * orderNumber;
+
+      /*Secret behind contents*/
+      var tr = document.createElement("tr")
+
+      var photoCell = document.createElement("td")
+      photoCell.innerHTML = "<img src='" + photo + "' class='rounf-figure' width='100px'/>"
+      var nameCell = document.createElement("td");
+      nameCell.innerHTML = name;
+      var priceCell = document.createElement("td");
+      priceCell.innerHTML = price;
+      var orderNumberCell = document.createElement("td");
+      orderNumberCell.innerHTML = orderNumber
+      var pxoCell = document.createElement("td");
+      pxoCell.innerHTML = pxo;
+
+      /*Row's contents*/
+      tr.appendChild(photoCell)
+      tr.appendChild(nameCell);
+      tr.appendChild(orderNumberCell);
+      tr.appendChild(priceCell);
+      tr.appendChild(pxoCell);
+
+      /*Delete button*/
+      var delink = document.createElement("a");
+      var deleteCell = document.createElement("td");
+      delink.href = "#";
+      delink.dataset.code = key;
+      var icon = document.createElement("i")
+      icon.className = "fa fa-trash icon-pink";
+      delink.appendChild(icon);
+      delink.onclick = function () {
+        removeCart(this.dataset.code);
+      }
+      deleteCell.appendChild(delink);
+      tr.appendChild(deleteCell);
+      cartB.appendChild(tr);
+
+      /*Calculating part 1*/
+      TotalPreTax += pxo;
     }
-    /*Calculating part 2*/
-    var taxC = 0.1 * (TotalPreTax );
-    var totalCost = TotalPreTax + taxC;
+  }
+  /*Calculating part 2*/
+  var taxC = 0.1 * (TotalPreTax);
+  var totalCost = TotalPreTax + taxC;
 
-    //This will assign values for 3 final line of cart 
-    document.getElementById('Cost').innerHTML=vndConvert.format(TotalPreTax);
-    document.getElementById('TaxCost').innerHTML=vndConvert.format(taxC);
-    document.getElementById('finalCost').innerHTML=vndConvert.format(totalCost);
+  //This will assign values for 3 final line of cart 
+  document.getElementById('Cost').innerHTML = vndConvert.format(TotalPreTax);
+  document.getElementById('TaxCost').innerHTML = vndConvert.format(taxC);
+  document.getElementById('finalCost').innerHTML = vndConvert.format(totalCost);
 }
 
-function removeCart(code){
-    if(typeof window.localStorage[code] !== "undefined"){
-        window.localStorage.removeItem(code);
-        document.getElementById("CartTable").getElementsByTagName('tbody')[0].innerHTML="";
-        showCart();
-    }
+function removeCart(code) {
+  if (typeof window.localStorage[code] !== "undefined") {
+    window.localStorage.removeItem(code);
+    document.getElementById("CartTable").getElementsByTagName('tbody')[0].innerHTML = "";
+    showCart();
+  }
 }
 //Refresh cart on load
-window.onload = function() {
-    showCart();
+window.onload = function () {
+  showCart();
 };

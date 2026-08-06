@@ -40,35 +40,33 @@
 <body>
     <header class=" sticky-top d-block">
 
+        <nav class="navbar navbar-expand-lg custom-navbar">
 
-
-
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-5 col-sm-4 col-md-3 col-xl-2 logo">
-                    <a class="navbar-brand consectetur-fluid" href="index.html">
-                        <img src="img/logo.png" alt="" id="logo"></a>
-                </div>
-
-                <div class="col-7 col-sm-8 col-md col-xl d-flex flex-column">
-
-                    <div class="row">
-                        <div class=" col d-flex justify-content-end ">
-
-                            <a href="#" class="shopping-cart">
-                                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                            </a>
-                            <!-- <i class="fas fa-user-alt" aria-hidden="true"></i> -->
-                            <a href="#" class="user">Đăng Nhập</a>
-                            <a href="#" class="user">Đăng Ký</a>
-
-                        </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-5 col-sm-4 col-md-3 col-xl-2 logo">
+                        <a class="navbar-brand consectetur-fluid" href="index.html">
+                            <img src="img/logo.png" alt="" id="logo"></a>
                     </div>
-                    <div class="row">
-                        <nav class="navbar navbar-expand-lg custom-navbar">
-                            <div class="d-flex justify-content-end ms-auto">
-                                <button class="navbar-toggler w-auto mx-1" type="button" data-bs-toggle="collapse"
+
+                    <div class="col-7 col-sm-8 col-md col-xl d-flex flex-column">
+
+                        <div class="row">
+                            <div class=" col d-flex justify-content-end ">
+
+                                <a href="giohang.html" class="shopping-cart">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                                <!-- <i class="fas fa-user-alt" aria-hidden="true"></i> -->
+                                <a href="dangnhap.html" class="user">Đăng Nhập</a>
+                                <a href="dangky.html" class="user">Đăng Ký</a>
+
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="d-flex justify-content-end">
+                                <button class="navbar-toggler w-auto" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                     aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
@@ -78,21 +76,24 @@
                             <div class="collapse navbar-collapse my-1" id="navbarSupportedContent">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
-                                        <a class="nav-link active fw-bold" aria-current="page" href="#">TRANG CHỦ</a>
+                                        <a class="nav-link active fw-bold" aria-current="page" href="index.html">TRANG
+                                            CHỦ</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active fw-bold" aria-current="page" href="#">GIỚI THIỆU</a>
+                                        <a class="nav-link active fw-bold" aria-current="page"
+                                            href="gioithieu.html">GIỚI THIỆU</a>
                                     </li>
 
                                     <li class="nav-item ">
-                                        <a class="nav-link active fw-bold" aria-current="page" href="#">
-                                            SẢN PHẨM
+                                        <a class="nav-link active fw-bold" aria-current="page" href="sanpham.html"> SẢN
+                                            PHẨM
                                         </a>
 
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link active fw-bold" aria-current="page" href="#">LIÊN HỆ</a>
+                                        <a class="nav-link active fw-bold" aria-current="page" href="lienhe.html">LIÊN
+                                            HỆ</a>
                                     </li>
 
                                 </ul>
@@ -103,26 +104,26 @@
                                             class="fas fa-search"></i></button>
                                 </form>
                             </div>
-                        </nav>
+                        </div>
+
                     </div>
-
                 </div>
+
+
             </div>
-
-
-        </div>
-
+        </nav>
     </header>
 
 
 
     <main>
-        
 
-        <div class="container-fluid">
-            <div class="row justify-content-center my-5">
 
-                <!-- Carousel -->
+        <div class="container">
+            <!-- Carousel -->
+            <div class="row justify-content-center my-4">
+
+
                 <div class="col col-sm-12 col-lg-10 col-xl-8 ">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <!-- data-bs-ride="carousel" nghĩa là cái carousel tự chuyển sau 5s -->
@@ -162,6 +163,7 @@
 
             </div>
 
+            <!-- Sản phẩm mới -->
             <div class="row g-3 mb-5">
                 <h2 class="border-bottom">Sản phẩm mới</h2>
 
@@ -278,82 +280,69 @@
                         </a>
                     </div>
                 </div>
+                <img src="img/trangchu/poster6.jpg" alt="" class="khung p-0" >
             </div>
 
-
-
+            <!-- Tin tức -->
             <div class="row g-3 mb-5 ">
                 <h2 class="border-bottom">Tin tức</h2>
-                <div class="d-flex justify-content-center">
-                    <div class="col-3 mx-5">
-                        <img src="img/trangchu/poster4.jpg" alt="" class="khung">
-                    </div>
-                    <div class="col-5">
-                        <div class="trangchu-tintuc">
-                            <h5>ƯU ĐÃI LỚN </h5>
-                            <p>Tựu trường giảm 30% Dành cho học sinh, sinh viên <br>
-                                Ngày: 08/08/2026 <br>
-                            </p>
-                            <p>
-                                Ưu đãi: <br>
-                                - Giảm 30% các loại bút màu và màu vẽ. <br>
-                                - Giảm 20% sổ phác thảo và cọ vẽ. <br>
-                                - Tặng hũ màu nước hoặc bộ cọ. <br>
-                            </p>
+                <div class="col-12 col-sm-6 col-lg-3 mb-2"><img src="img/trangchu/poster4.jpg" alt="" class="khung"></div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-2">
+                    <div class="trangchu-tintuc">
+                        <h5>ƯU ĐÃI LỚN </h5>
+                        <p>Tựu trường giảm 30% dành cho học sinh, sinh viên <br>
+                            Ngày: 08/08/2026 <br>
+                        </p>
+                        <p>
+                            Ưu đãi: <br>
+                            - Giảm 30% các loại bút và màu vẽ. <br>
+                            - Giảm 20% sổ phác thảo và cọ vẽ. <br>
+                            - Tặng hũ màu nước hoặc bộ cọ. <br>
+                        </p>
 
-                            <p>
-                                Tiện ích: <br>
-                                - Nhiều sản phẩm khuyến mãi. <br>
-                                - Miễn phí giao hàng (đơn từ 200K). <br>
-                                - Voucher giảm giá thêm. <br>
-                                - Sản phẩm chính hãng. <br>
-                            </p>
-
-                            <p>
-                                Địa chỉ: Đường 3/2, P. Xuân Khánh, TP. Cần Thơ. <br>
-                                Đối tượng áp dụng: Học sinh, sinh viên đam mê vẽ. <br>
-                                Đến ngay kẻo lỡ! <br>
-                            </p>
-                        </div>
+                        <p>
+                            Tiện ích: <br>
+                            - Miễn phí giao hàng (đơn từ 200K). <br>
+                            - Voucher giảm giá thêm. <br>
+                            - Sản phẩm chính hãng. <br>
+                        </p>
                     </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-2"><img src="img/trangchu/poster5.jpg" alt="" class="khung"></div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-2">
+                    <h5>KHAI TRƯƠNG </h5>
+                    <p>Khai trương giảm 30% dành cho khách hàng mới <br>
+                        Ngày: 08/08/2026 <br>
+                    </p>
+                    <p>
+                        Ưu đãi: <br>
+                        - Giảm 30% các loại cọ và màu vẽ. <br>
+                        - Nhận ngay 01 phần quà xinh xỉu. <br>
+                        - Tặng hũ màu nước hoặc bộ cọ. <br>
+                    </p>
+
+                    <p>
+                        Tiện ích: <br>
+                        - Nhiều sản phẩm khuyến mãi. <br>
+                        - Miễn phí giao hàng (đơn từ 300K). <br>
+                        - Voucher giảm giá thêm. <br>
+                    </p>
+
                 </div>
 
                 <div class="d-flex justify-content-center">
                     <div class="col-3 mx-5">
-                        <img src="img/trangchu/poster4.jpg" alt="" class="khung">
+
                     </div>
                     <div class="col-5">
-                        <div class="trangchu-tintuc">
-                            <h5>ƯU ĐÃI LỚN </h5>
-                            <p>Tựu trường giảm 30% Dành cho học sinh, sinh viên <br>
-                                Ngày: 08/08/2026 <br>
-                            </p>
-                            <p>
-                                Ưu đãi: <br>
-                                - Giảm 30% các loại bút màu và màu vẽ. <br>
-                                - Giảm 20% sổ phác thảo và cọ vẽ. <br>
-                                - Tặng hũ màu nước hoặc bộ cọ. <br>
-                            </p>
 
-                            <p>
-                                Tiện ích: <br>
-                                - Nhiều sản phẩm khuyến mãi. <br>
-                                - Miễn phí giao hàng (đơn từ 200K). <br>
-                                - Voucher giảm giá thêm. <br>
-                                - Sản phẩm chính hãng. <br>
-                            </p>
-
-                            <p>
-                                Địa chỉ: Đường 3/2, P. Xuân Khánh, TP. Cần Thơ. <br>
-                                Đối tượng áp dụng: Học sinh, sinh viên đam mê vẽ. <br>
-                                Đến ngay kẻo lỡ! <br>
-                            </p>
-                        </div>
                     </div>
                 </div>
+
+
             </div>
 
-
+            <!-- Comment -->
             <div class="row">
                 <h2 class="border-bottom">Mọi người nói gì về chúng mình thế?</h2>
 
@@ -378,11 +367,12 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-3 col-sm-2  col-md-1"></div>
-                        <div class="col-9 col-md-7">
+                        <div class="col-9 col-md-4">
                             <div>
                                 <img src="img/trangchu/cmt1.jpg" alt="" class="trangchu-anhcomment">
                             </div>
                         </div>
+                        <div class="col-9 col-md-3"></div>
                     </div>
 
                 </div>
@@ -409,11 +399,12 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-3 col-sm-2  col-md-1"></div>
-                        <div class="col-9 col-md-7">
+                        <div class="col-9 col-md-4">
                             <div>
                                 <img src="img/trangchu/cmt2.jpg" alt="" class="trangchu-anhcomment">
                             </div>
                         </div>
+                        <div class="col-9 col-md-3"></div>
                     </div>
                 </div>
 
@@ -439,11 +430,12 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-3 col-sm-2  col-md-1"></div>
-                        <div class="col-9 col-md-7">
+                        <div class="col-9 col-md-4">
                             <div>
                                 <img src="img/trangchu/cmt3.jpg" alt="" class="trangchu-anhcomment">
                             </div>
                         </div>
+                        <div class="col-9 col-md-3"></div>
                     </div>
                 </div>
 
@@ -468,11 +460,12 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-3 col-sm-2  col-md-1"></div>
-                        <div class="col-9 col-md-7">
+                        <div class="col-9 col-md-4">
                             <div>
                                 <img src="img/trangchu/cmt4.jpg" alt="" class="trangchu-anhcomment">
                             </div>
                         </div>
+                        <div class="col-9 col-md-3"></div>
                     </div>
                 </div>
 
@@ -510,7 +503,7 @@
                         </li>
                         <li>
                             <a href="mailto: anhb2404974@student.ctu.edu.vn">
-                                <i class="fas fa-mail-bulk" aria-hidden="true"></i> Mail:
+                                <i class="fas fa-envelope" aria-hidden="true"></i> Mail:
                                 khangb2405036@student.ctu.edu.vn
                             </a>
                         </li>
@@ -540,9 +533,9 @@
         </div>
         <hr>
 
-        <div class="d-sm-flex  justify-content-center align-items-center text-center py-2">
-            <p class="mb-0 text-center">&copy; Đây là bài tập của nhóm 02.</p>
-            <p class="mb-0 text-center"> Không phải là trang web mua bán !!! 🐳🐳🐳 </p>
+        <div class="d-sm-flex d-block footer-end justify-content-center align-items-center text-center py-2">
+            <p class="mb-0">&copy; Đây là bài tập của nhóm 02.</p>
+            <p class="mb-0"> Không phải là trang web mua bán !!! 🐳🐳🐳 </p>
         </div>
 
         <!-- uk-totop: Tạo hiệu ứng cho mũi tên -->
