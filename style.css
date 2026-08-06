@@ -160,7 +160,6 @@ header {
 .custom-navbar .navbar-nav .nav-link:hover,
 .btn-custom-search:hover,
 .fa-shopping-cart:hover,
-.fa-user-alt:hover,
 .user:hover {
     background-color: rgb(62, 196, 187);
     color: rgb(255, 205, 53);
@@ -181,7 +180,6 @@ header {
     align-items: center;
     justify-content: center;
 }
-
 
 .form-search-box {
     display: flex;
@@ -287,7 +285,6 @@ footer h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    visibility: visible;
     z-index: 9999;
     /* Tạo viền */
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
@@ -299,6 +296,20 @@ footer h3 {
     filter: brightness(1.05);
     box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.16);
     transition: 0.3s ease-out;
+}
+
+.to-top-hidden {
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+
+}
+
+.to-top-hidden.to-top-show {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 /* =========================== TRANG CHỦ =========================== */
@@ -315,6 +326,21 @@ footer h3 {
 .fa-star{
     color: rgb(255, 205, 53);
 }
+
+.trangchu-hidden {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.trangchu-hidden.trangchu-show {
+    transform: translateX(0px);
+    opacity: 1;
+    
+}
+
+
+
 
 /* =========================== GIỚI THIỆU =========================== */
 .gioithieu-noidung {

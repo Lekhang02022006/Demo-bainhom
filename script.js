@@ -1,16 +1,31 @@
-
-// =========================== GIỚI THIỆU =======================
+// =========================== TOTOP =======================
 // Hàm kiểm tra và hiển thị nội dung
-function checkVisibility() {
+function checkVisibility_totop() {
+  var $toTop = $('#sticky-to-top');
+
+  // Lấy vị trí cuộn hiện tại
+  var scrollTop = $(this).scrollTop();
+
+  // Nếu cuộn xuống hơn 100px
+  if (scrollTop > 100) {
+    $toTop.addClass('to-top-show');
+  } else {
+    $toTop.removeClass('to-top-show');
+  }
+};
+// =========================== TRANG CHU =======================
+// Hàm kiểm tra và hiển thị nội dung
+function checkVisibility_trangchu() {
   // Lấy vị trí cuộn hiện tại
   var scrollTop = $(window).scrollTop();
   // Lấy chiều cao cửa sổ trình duyệt
   var windowHeight = $(window).height();
 
   // Duyệt qua từng nội dung
-  $('.gioithieu-item').each(function () {
+  $('.trangchu-hidden').each(function () {
     var $item = $(this);
 
+    if ($item.hasClass('trangchu-show')) return;
     // Lấy vị trí của nội dung so với top trang
     var itemTop = $item.offset().top;
 
@@ -21,6 +36,22 @@ function checkVisibility() {
     // Nếu đã cuộn đến vị trí cần hiển thị
     if (scrollTop > triggerPoint) {
       // Thêm class visible để hiển thị
+      $item.addClass('trangchu-show');
+    }
+  })
+};
+// =========================== GIỚI THIỆU =======================
+function checkVisibility() {
+  var scrollTop = $(window).scrollTop();
+  var windowHeight = $(window).height();
+
+  $('.gioithieu-item').each(function () {
+    var $item = $(this);
+    if ($item.hasClass('gioithieu-visible')) return;
+    var itemTop = $item.offset().top;
+    var triggerPoint = itemTop - windowHeight + 100;
+
+    if (scrollTop > triggerPoint) {
       $item.addClass('gioithieu-visible');
     }
   })
