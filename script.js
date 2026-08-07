@@ -13,6 +13,7 @@ function checkVisibility_totop() {
     $toTop.removeClass('to-top-show');
   }
 };
+
 // =========================== TRANG CHU =======================
 // Hàm kiểm tra và hiển thị nội dung
 function checkVisibility_trangchu() {
@@ -41,7 +42,7 @@ function checkVisibility_trangchu() {
   })
 };
 // =========================== GIỚI THIỆU =======================
-function checkVisibility() {
+function checkVisibility_gioithieu() {
   var scrollTop = $(window).scrollTop();
   var windowHeight = $(window).height();
 
@@ -56,6 +57,259 @@ function checkVisibility() {
     }
   })
 };
+
+
+//================== CHITTIETSANPHAM ==================//
+
+function addToCartFromDetail() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = parseInt(urlParams.get('id'));
+  if (id) {
+    addToCart(id);
+  }
+}
+// Thêm lắng nghe sự kiện click cho div sản phẩm
+document.querySelectorAll('.sanpham').forEach(function (product) {
+  product.addEventListener('click', function (event) {
+    event.stopPropagation();
+
+    const productId = this.getAttribute('data-id');
+
+    if (productId) {
+      window.location.href = `chitietsanpham.html?id=${productId}`;
+    }
+  });
+});
+
+// Hiển thị trang chi tiết sản phẩm theo đúng id
+// Lấy id trên url
+const urlParams = new URLSearchParams(window.location.search);
+const productId = parseInt(urlParams.get('id'));
+
+const product = itemList.find(item => item.id === productId);
+
+if (product) {
+  document.querySelector('.chitiet-ten h3').textContent = product.ten;
+  document.querySelector('.chitiet-mota p').textContent = product.mo_ta;
+  document.querySelector('.chitiet-giatien p').textContent = product.gia_dinh_dang;
+  document.querySelector('.chitiet-anh img').src = product.anh;
+  document.querySelector('.chitiet-anh img').alt = product.ten;
+}
+
+// Hàm thêm vào giỏ hàng
+function addToCart(productId) {
+  var soLuongDatHang = document.querySelector('.chitiet-soluong input');
+  var soLuongGioHang = parseInt(soLuongDatHang.value);
+
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+  var sanPhamTrongGio = cart.find(item => item.id === productId);
+
+  const MAX_SO_LUONG = 50;
+
+  if (sanPhamTrongGio) {
+    var tong = sanPhamTrongGio.quantity + soLuongGioHang;
+
+    if (tong > MAX_SO_LUONG) {
+      sanPhamTrongGio.quantity = MAX_SO_LUONG;
+      alert("Bạn đã đặt quá số lượng cho phép. Tối đa 50 sản phẩm");
+    } else {
+      sanPhamTrongGio.quantity = tong;
+      alert("Đã cập nhật số lượng sản phẩm trong giỏ hàng");
+    }
+  } else {
+    if (soLuongGioHang > MAX_SO_LUONG) {
+      alert("Bạn đã đặt quá số lượng cho phép. Tối đa 50 sản phẩm");
+      soLuongDatHang.value = 1;
+      return;
+    }
+
+    // function findProduct(productId) {
+    //   for (var i = 0; i < itemList.length; i++) {
+    //     if (itemList[i].id === productId) {
+    //       return itemList[i];
+    //     }
+    //   }
+
+    //   return null;
+    // }
+
+    // var product = findProduct(productId);
+
+    var product = itemList.find(item => item.id === productId);
+
+
+
+    if (product) {
+      cart.push({
+        id: product.id,
+        ten: product.ten,
+        gia: product.gia,
+        gia_dinh_dang: product.gia_dinh_dang,
+        anh: product.anh,
+        quantity: soLuongGioHang
+      });
+      alert("Đã thêm sản phẩm vào giỏ hàng");
+    }
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  soLuongDatHang.value = 1;
+}
+
+function purchasingProducts() {
+
+  addToCart(productId);
+
+  window.location.href = "giohang.html";
+
+}
+
+//================== GIOHANG ==================//
+
+function showCart() {
+  //create a body for later usages
+  var cartB = document.getElementById("CartBody");
+
+  if (cartB == null) {
+    return;
+  }
+
+  cartB.innerHTML = "";
+  var TotalPreTax = 0;
+
+  //VND converter funtion (it might not be necessary but i did it anyway)
+  var vndConvert = new Intl.NumberFormat('vi-VN', {
+    style: 'currency',
+    currency: 'VND',
+  })
+
+  //read data from local storage and then add it to table
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  if (cart.length === 0) {
+    cartB.innerHTML = '<tr><td colspan="6" class="text-center">Giỏ hàng trống</td></tr>';
+    document.getElementById('Cost').innerHTML = vndConvert.format(0);
+    document.getElementById('TaxCost').innerHTML = vndConvert.format(0);
+    document.getElementById('finalCost').innerHTML = vndConvert.format(0);
+    return;
+  }
+
+  for (var i = 0; i < cart.length; i++) {
+    var item = cart[i];
+    var product = itemList.find(p => p.id === item.id);
+
+    if (product) {
+      var photo = product.anh;
+      var name = product.ten;
+      var price = product.gia;
+      var orderNumber = item.quantity;
+      var pxo = price * orderNumber;
+
+      /*Secret behind contents*/
+      var tr = document.createElement("tr")
+
+      var photoCell = document.createElement("td")
+      photoCell.innerHTML = "<img src='" + photo + "' class='giohang-img'/>"
+      var nameCell = document.createElement("td");
+      nameCell.innerHTML = name;
+      var priceCell = document.createElement("td");
+      priceCell.innerHTML = vndConvert.format(price);
+      var orderNumberCell = document.createElement("td");
+      orderNumberCell.innerHTML = orderNumber
+      var pxoCell = document.createElement("td");
+      pxoCell.innerHTML = vndConvert.format(pxo);
+
+      /*Row's contents*/
+      tr.appendChild(photoCell)
+      tr.appendChild(nameCell);
+      tr.appendChild(orderNumberCell);
+      tr.appendChild(priceCell);
+      tr.appendChild(pxoCell);
+
+      /*Delete button*/
+      var delink = document.createElement("a");
+      var deleteCell = document.createElement("td");
+      delink.href = "#";
+      delink.dataset.id = item.id;
+      var icon = document.createElement("i");
+      icon.className = "fa fa-trash icon-pink";
+      delink.appendChild(icon);
+
+      // CHỈ GÁN 1 LẦN DUY NHẤT
+      delink.onclick = function (e) {
+        e.preventDefault();
+        removeCart(parseInt(this.dataset.id));
+      };
+
+      deleteCell.appendChild(delink);
+      tr.appendChild(deleteCell);
+      cartB.appendChild(tr);
+
+      /*Calculating part 1*/
+      TotalPreTax += pxo;
+    }
+  }
+
+  /*Calculating part 2*/
+  var taxC = 0.1 * TotalPreTax;
+  var totalCost = TotalPreTax + taxC;
+
+  //This will assign values for 3 final line of cart 
+  document.getElementById('Cost').innerHTML = vndConvert.format(TotalPreTax);
+  document.getElementById('TaxCost').innerHTML = vndConvert.format(taxC);
+  document.getElementById('finalCost').innerHTML = vndConvert.format(totalCost);
+}
+
+function removeCart(productId) {
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart = cart.filter(item => item.id !== productId);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  showCart();
+}
+
+//Refresh cart on load
+window.onload = function () {
+  showCart();
+};
+
+// =================== THANH TOÁN ==================//
+function checkout() {
+  // Lấy giỏ hàng từ localStorage
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Kiểm tra giỏ hàng có trống không
+  if (cart.length === 0) {
+    alert("Giỏ hàng của bạn đang trống! Vui lòng thêm sản phẩm trước khi thanh toán.");
+    return;
+  }
+
+  // Tính tổng tiền
+  var total = 0;
+  for (var i = 0; i < cart.length; i++) {
+    var item = cart[i];
+    var product = itemList.find(p => p.id === item.id);
+    if (product) {
+      total += product.gia * item.quantity;
+    }
+  }
+
+  // Định dạng tiền VND
+  var vndConvert = new Intl.NumberFormat('vi-VN', {
+    style: 'currency',
+    currency: 'VND',
+  });
+
+  // Hiển thị thông báo cảm ơn kèm tổng tiền
+  alert("Chúng mình cảm ơn bạn đã mua hàng!\nTổng giá trị đơn hàng của bạn là: " + vndConvert.format(total) + "\nGóc Họa Sĩ hẹn gặp lại bạn!");
+
+  // Xóa toàn bộ giỏ hàng
+  localStorage.removeItem('cart');
+
+  // Cập nhật lại giao diện giỏ hàng
+  showCart();
+}
+
+
 
 // =========================== RÀNG BUỘC ĐĂNG NHẬP =======================
 
@@ -128,7 +382,6 @@ function contact(frm) {
   // Kiểm tra họ tên
   if (hoten.value.trim().length < 4) {
     alert("Họ Tên không hợp lệ")
-    hoten.focus();
     return false;
   }
 
@@ -136,122 +389,27 @@ function contact(frm) {
   var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   if (emailReg.test(email.value.trim()) == false) {
     alert("Email không hợp lệ");
-    email.focus();
     return false;
   }
 
-  // ==================== 3. KIỂM TRA SỐ ĐIỆN THOẠI ====================
   // Định nghĩa cấu trúc chuẩn của số điện thoại:
-  // ^[0-9]   : Chỉ cho phép các ký tự là số từ 0 đến 9.
-  // {10}$  : Tổng số lượng chữ số bắt buộc phải nằm trong khoảng 10 ký tự.
+  // [0-9]   : Chỉ cho phép các ký tự là số từ 0 đến 9.
+  // {9}$  : Tổng số lượng chữ số bắt buộc phải nằm trong khoảng 9 ký tự.
   var phoneReg = /^0[0-9]{9}$/;
 
   // Kiểm tra xem số điện thoại người dùng nhập vào có đúng là số và đủ độ dài hay không
   if (phoneReg.test(phone.value) == false) {
     alert("Số điện thoại không hợp lệ"); // Cảnh báo nếu chứa chữ cái hoặc quá ngắn/quá dài
-    phone.focus();                       // Đưa con trỏ chuột quay lại ô nhập Số điện thoại
-    return false;                        // Dừng hàm, ngăn chặn gửi form
+    return false;                        
   }
 
 
   // Kiểm tra thông tin đưa vào là quá ít 
   if (content.value.trim().length < 10) {
     alert("Chúng tôi không giải quyết liên hệ này");
-    content.focus();
     return false;
   }
 
   alert("Đã gửi dữ liệu");
   return true;
 }
-
-// =========================== GIỎ HÀNG =======================
-// function goToCart(){
-//     window.location.href="Cart.html"
-// }
-function showCart() {
-  //create a body for later usages
-  var cartB = document.getElementById("CartBody");
-  cartB.innerHTML = "";
-  var TotalPreTax = 0;
-
-  //VND converter funtion (it might not be necessary but i did it anyway)
-  var vndConvert = new Intl.NumberFormat('vi-VN', {
-    style: 'currency',
-    currency: 'VND',
-  })
-
-  //read data from local storage and then add it to table
-  for (var i = 0; i < localStorage.length; i++) {
-    var key = localStorage.key(i);
-
-    if (itemList[key]) {
-      /*Declaration*/
-      var item = itemList[key];
-      var photo = item.photo;
-      var name = item.name;
-      var price = item.price;
-      var orderNumber = localStorage.getItem(key);
-      var pxo = price * orderNumber;
-
-      /*Secret behind contents*/
-      var tr = document.createElement("tr")
-
-      var photoCell = document.createElement("td")
-      photoCell.innerHTML = "<img src='" + photo + "' class='rounf-figure' width='100px'/>"
-      var nameCell = document.createElement("td");
-      nameCell.innerHTML = name;
-      var priceCell = document.createElement("td");
-      priceCell.innerHTML = price;
-      var orderNumberCell = document.createElement("td");
-      orderNumberCell.innerHTML = orderNumber
-      var pxoCell = document.createElement("td");
-      pxoCell.innerHTML = pxo;
-
-      /*Row's contents*/
-      tr.appendChild(photoCell)
-      tr.appendChild(nameCell);
-      tr.appendChild(orderNumberCell);
-      tr.appendChild(priceCell);
-      tr.appendChild(pxoCell);
-
-      /*Delete button*/
-      var delink = document.createElement("a");
-      var deleteCell = document.createElement("td");
-      delink.href = "#";
-      delink.dataset.code = key;
-      var icon = document.createElement("i")
-      icon.className = "fa fa-trash icon-pink";
-      delink.appendChild(icon);
-      delink.onclick = function () {
-        removeCart(this.dataset.code);
-      }
-      deleteCell.appendChild(delink);
-      tr.appendChild(deleteCell);
-      cartB.appendChild(tr);
-
-      /*Calculating part 1*/
-      TotalPreTax += pxo;
-    }
-  }
-  /*Calculating part 2*/
-  var taxC = 0.1 * (TotalPreTax);
-  var totalCost = TotalPreTax + taxC;
-
-  //This will assign values for 3 final line of cart 
-  document.getElementById('Cost').innerHTML = vndConvert.format(TotalPreTax);
-  document.getElementById('TaxCost').innerHTML = vndConvert.format(taxC);
-  document.getElementById('finalCost').innerHTML = vndConvert.format(totalCost);
-}
-
-function removeCart(code) {
-  if (typeof window.localStorage[code] !== "undefined") {
-    window.localStorage.removeItem(code);
-    document.getElementById("CartTable").getElementsByTagName('tbody')[0].innerHTML = "";
-    showCart();
-  }
-}
-//Refresh cart on load
-window.onload = function () {
-  showCart();
-};

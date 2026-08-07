@@ -29,7 +29,6 @@ body {
     color: #ffcd35;
 }
 
-
 /* Khung */
 .khung {
     border-radius: 10px;
@@ -37,10 +36,6 @@ body {
     box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.16);
 }
 
-/* IMG Scale up */
-.img:hover {
-    transform: scale(1.05);
-}
 
 /* Thẻ lable nếu có xài */
 label {
@@ -54,8 +49,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     font-weight: bold;
     margin-bottom: 15px;
     line-height: 1.3;
@@ -83,10 +77,6 @@ h5 {
     font-size: 18px;
 }
 
-h6 {
-    font-size: 14px;
-}
-
 p {
     font-size: 15px;
     line-height: 1.7;
@@ -102,7 +92,6 @@ img {
 
 /* =========================== HEADER =========================== */
 
-
 @keyframes slideInDown {
     from {
         transform: translateY(-30%);
@@ -114,7 +103,6 @@ img {
         opacity: 1;
     }
 }
-
 
 
 /* NAVBAR */
@@ -131,11 +119,9 @@ header {
 .navbar-toggler {
     background-color: rgb(255, 205, 53);
     color: rgb(62, 196, 187);
-    /* đổi sang màu bạn muốn */
 
     border-radius: 0.5rem;
     padding: 5px 12px;
-    /* tạo khoảng cách giống nút */
     margin: 4px 5px;
 
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
@@ -204,14 +190,6 @@ header {
     height: 50%;
 }
 
-
-/* DROPDOWN */
-.dropdown-menu {
-    background-color: rgb(62, 196, 187);
-}
-
-
-
 /* =========================== FOOTER =========================== */
 
 footer {
@@ -228,7 +206,7 @@ footer h3 {
     color: white;
 }
 
-.fa-phone-alt{
+.fa-phone-alt {
     transform: scaleX(-100%);
 }
 
@@ -286,16 +264,16 @@ footer h3 {
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    /* Tạo viền */
+    /* Tạo bóng */
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
 
-    transition: 0.3s ease-out;
+    transition: 0.3s ease;
 }
 
 #sticky-to-top:hover {
     filter: brightness(1.05);
     box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.16);
-    transition: 0.3s ease-out;
+    transition: 0.3s ease;
 }
 
 .to-top-hidden {
@@ -319,11 +297,11 @@ footer h3 {
     border-radius: 50%;
 }
 
-.trangchu-anhcomment{
+.trangchu-anhcomment {
     border-radius: 10px;
 }
 
-.fa-star{
+.fa-star {
     color: rgb(255, 205, 53);
 }
 
@@ -336,32 +314,29 @@ footer h3 {
 .trangchu-hidden.trangchu-show {
     transform: translateX(0px);
     opacity: 1;
-    
+
 }
-
-
-
 
 /* =========================== GIỚI THIỆU =========================== */
 .gioithieu-noidung {
     font-size: 20px;
 }
 
-.gioithieu-item{
+.gioithieu-item {
     opacity: 0;
     transition: all 0.8s ease;
 }
 
 /* Cái mà có lớp item và odd */
-.gioithieu-item.gioithieu-odd{
+.gioithieu-item.gioithieu-odd {
     transform: translateX(-100px);
 }
 
-.gioithieu-item.gioithieu-even{
+.gioithieu-item.gioithieu-even {
     transform: translateX(100px);
 }
 
-.gioithieu-item.gioithieu-visible{
+.gioithieu-item.gioithieu-visible {
     opacity: 1;
     transform: translate(0px) !important;
 }
@@ -373,20 +348,21 @@ footer h3 {
 .sanpham {
     border: 1px solid #fe97ca;
     border-radius: 10px;
-
     padding: 12px;
-    height:  100%;
-    /* Đảm bảo các thẻ sản phẩm bằng chiều cao nhau */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-/*Khuôn ảnh*/
+/*Ảnh sản phẩm*/
 .sanpham-anh {
     width: 100%;
+    padding-top: 100%;
     position: relative;
     overflow: hidden;
-                            /* Cắt bỏ phần ảnh thừa */
     border-radius: 6px;
     margin-bottom: 10px;
+    flex-shrink: 0;
 }
 
 .sanpham:hover {
@@ -394,11 +370,13 @@ footer h3 {
     border-width: 2.5px;
 }
 
-
 .sanpham-anh img {
-    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    /* Cắt ảnh vừa khít khung vuông, không méo hình */
     object-position: center;
     transition: transform 0.3s ease;
 }
@@ -416,23 +394,30 @@ footer h3 {
     font-size: 16px;
     font-weight: 600;
     line-height: 1.4;
-    height: 40px;
-    /* Cố định chiều cao 2 dòng */
+    min-height: 44px;
+    max-height: 58px;
     overflow: hidden;
     display: -webkit-box;
     display: box;
-    /* Fallback for non-webkit browsers */
     -webkit-line-clamp: 2;
-    /* Hiển thị tối đa 2 dòng, dư thì cắt bớt */
     line-clamp: 2;
-    /* Standard property for compatibility */
     -webkit-box-orient: vertical;
     margin-bottom: 8px;
+    flex: 1 1 auto;
+}
+
+/* Nút mua hàng */
+.sanpham-icon {
+    color: #fe5054;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 8px;
 }
 
 .sanpham-icon:hover {
     color: #fe97ca;
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 
@@ -440,78 +425,214 @@ footer h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 6px;
+    padding: 0 4px;
     margin-top: 4px;
-    color: #fe5054;
+    flex-shrink: 0;
+    margin-top: auto;
 }
 
 .sanpham-gia {
     font-weight: 700;
     font-size: 1rem;
-
+    color: #fe5054;
     margin-bottom: 0;
 }
 
-
-/*.sanpham{
-    padding: 0 5px;
-    display: block;
-    flex-wrap: nowrap;
-    align-content: end;
+/*Danh mục sản phẩm*/
+.danhmuc {
+    border: 2px solid #fe97ca;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(254, 151, 202, 0.1);
 }
 
-.sanpham-anh img, .sanpham-ten {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+/*Tiêu đề danh mục*/
+.danhmuc h5 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FE97CA;
+    text-transform: none;
 }
 
-.sanpham-gia-hang {
+.danhmuc ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.danhmuc ul li a {
+    display: block;
+    padding: 8px 12px;
+    color: #333333;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: all 0.1s ease;
+}
+
+.danhmuc ul li a:hover {
+    color: #fe5054;
+    font-weight: bold;
+}
+
+/* =========================== CHITIETGIOHANG =========================== */
+/* Khung ảnh */
+.chitiet-anh {
+    border-radius: 10px;
+    padding: 12px;
+    border: 2px solid #fe97ca;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.chitiet-anh img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 6px;
+}
+
+/* Khung thông tin sản phẩm */
+.chitietsanpham {
+    border-radius: 10px;
+    padding: 35px 40px 40px 40px;
+    border: 2px solid #fe97ca;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Giá tiền */
+.chitiet-giatien p {
+    font-size: 30px;
+    font-weight: 600px;
+    color: #FE5054;
+    margin-bottom: 25px;
+}
+
+/* Chọn số lượng */
+.chitiet-soluong {
+    margin-bottom: 30px;
+}
+
+.chitiet-soluong label {
+    margin-right: 15px;
+}
+
+.chitiet-soluong input {
+    width: 80px;
+    padding: 8px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+}
+
+/*Nút lên xuống chỗ số lượng*/
+.chitiet-soluong input::-webkit-inner-spin-button,
+.chitiet-soluong input::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+/* Các nút bấm */
+.chitiet-nut {
     display: flex;
-    justify-content: space-between;
-    color: rgb(254, 151, 202);
-  align-items: baseline;
-  margin-top: auto;
-} */
+    gap: 15px;
+}
+
+.chitiet-nut button {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+
+.chitiet-nut_mua:hover button,
+.chitiet-nut_themgiohang:hover button {
+    background: #3ec4bb;
+    color: #ffcd35;
+}
+
+/* Nút mua */
+.chitiet-nut_mua {
+    flex: 1;
+}
+
+/* Nút Thêm vào giỏ */
+.chitiet-nut_themgiohang {
+    flex: 1;
+}
+
+
 
 /* =========================== GIỎ HÀNG =========================== */
 
-.Cart-Summary p{
+.Cart-Summary p {
     margin: auto;
     font-size: 22px;
     text-align: center;
 }
-.Cart-Summary{
 
-
+.Cart-Summary {
     margin-top: 30px;
     margin-bottom: 10px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
+}
+
+.fa-trash {
+    color: #fe97ca;
+}
+
+.giohang-img {
+    width: 100px;
+    height: 100px;
+}
+
+.giohang-thead th {
+    background-color: rgb(62, 196, 187);
 }
 
 /* =========================== ĐĂNG NHẬP / KÝ =========================== */
-.dangnhap a, .dangky a {
+.dangnhap a,
+.dangky a {
     color: black;
     margin-top: 5px;
 }
 
-.dangnhap h2, .dangky h2 {
+.dangnhap h2,
+.dangky h2 {
     text-align: center;
 }
 
-.dangnhap-checkbox, .dangky-checkbox {
-  accent-color:rgb(62, 196, 187) ;
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
+.dangnhap-checkbox,
+.dangky-checkbox {
+    accent-color: rgb(62, 196, 187);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
 }
 
-.dangky, .dangnhap {
+.dangky,
+.dangnhap {
     animation: slideInDown 0.5s ease;
 }
 
 /* =========================== LIÊN HỆ =========================== */
-@keyframes slideInRight{
+@keyframes slideInRight {
     from {
         transform: translateX(-100px);
         opacity: 0;
@@ -527,7 +648,7 @@ footer h3 {
     animation: slideInRight 0.8s ease;
 }
 
-@keyframes slideInLeft{
+@keyframes slideInLeft {
     from {
         transform: translateX(100px);
     }
@@ -540,5 +661,3 @@ footer h3 {
 .lienhe-right {
     animation: slideInLeft 0.8s ease;
 }
-
-

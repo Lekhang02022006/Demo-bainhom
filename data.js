@@ -1,0 +1,552 @@
+var itemList = [
+  {
+    id: 1,
+    ten: "Bộ Chì Màu 120 Màu Kalour",
+    gia: 750000,
+    gia_dinh_dang: "750,000₫",
+    anh: "img/sanpham/image1.jpg",
+    mo_ta: "Bút chì màu cao cấp hãng Yover với hộp thiếc cao cấp chất màu tốt phù hợp mọi đối tượng sử dụng thiết kế hộp thiếc gọn gàng nhiều lớp màu mang theo bên mình thật dễ dàng",
+    thuong_hieu: "Kalour",
+    danh_muc: "but-chi"
+  },
+  {
+    id: 2,
+    ten: "Bộ Chì Màu 180 Màu Kalour",
+    gia: 990000,
+    gia_dinh_dang: "990,000₫",
+    anh: "img/sanpham/image98.jpg",
+    mo_ta: "Bút chì màu cao cấp hãng Yover với hộp thiếc cao cấp chất màu tốt phù hợp mọi đối tượng sử dụng thiết kế hộp thiếc gọn gàng nhiều lớp màu mang theo bên mình thật dễ dàng",
+    thuong_hieu: "Kalour",
+    danh_muc: "but-chi"
+  },
+  {
+    id: 3,
+    ten: "Bộ Chì Màu 180 Màu Kalour (Hình Con Hươu Đỏ)",
+    gia: 1050000,
+    gia_dinh_dang: "1,050,000₫",
+    anh: "img/sanpham/image109.jpg",
+    mo_ta: "Bút chì màu cao cấp hãng Yover với hộp thiếc cao cấp chất màu tốt phù hợp mọi đối tượng sử dụng thiết kế hộp thiếc gọn gàng nhiều lớp màu mang theo bên mình thật dễ dàng",
+    thuong_hieu: "Kalour",
+    danh_muc: "but-chi"
+  },
+  {
+    id: 4,
+    ten: "Ngòi Bút Chì Uniball UL-S Smudge-Proof Leads",
+    gia: 45000,
+    gia_dinh_dang: "45,000₫",
+    anh: "img/sanpham/image66.png",
+    mo_ta: "Ruột chì bấm công nghệ Smudge-Proof chống lem, nhiều cỡ ngòi 0.3, 0.5, 0.7mm, đa dạng độ mềm từ HB đến 4B",
+    thuong_hieu: "Uniball",
+    danh_muc: "but-chi"
+  },
+  {
+    id: 5,
+    ten: "Bút Chì Kẹp Lõi 2.0mm MH-500 Uniball Nhật Bản",
+    gia: 123000,
+    gia_dinh_dang: "123,000₫",
+    anh: "img/sanpham/image67.png",
+    mo_ta: "Đường kính lõi chì 2.0mm, thiết kế drop clutch, phù hợp phác thảo và vẽ kỹ thuật, có nhiều độ đậm HB, B, 2B, 3B, 4B",
+    thuong_hieu: "Uniball",
+    danh_muc: "but-chi"
+  },
+  {
+    id: 6,
+    ten: "Bút Chì Bấm Lắc Tombow BST SHIMMER Lấp Lánh 0.5mm",
+    gia: 95000,
+    gia_dinh_dang: "95,000₫",
+    anh: "img/sanpham/image58.png",
+    mo_ta: "Bút chì bấm cơ học Tombow Mono Graph, thiết kế lắc ra ngòi, đầu gôm tích hợp, phiên bản Shimmer lấp lánh",
+    thuong_hieu: "Tombow",
+    danh_muc: "but-chi"
+  },
+  {
+    id: 7,
+    ten: "Set 12 Bút Chì Phác Thảo Cao Cấp Tombow Mono (4H-6B) Tặng Kèm Gôm",
+    gia: 450000,
+    gia_dinh_dang: "450,000₫",
+    anh: "img/sanpham/image110.jpg",
+    mo_ta: "Bộ 12 cây từ 4H đến 6B, ruột chì đen cao cấp, nét mượt, ít gãy, kèm gôm mono cao cấp trong hộp nhựa sang trọng",
+    thuong_hieu: "Tombow",
+    danh_muc: "but-chi"
+  },
+  {
+    id: 8,
+    ten: "Chì Phác Thảo Faber-Castell 9000 Pencils Hộp Thiếc 12 Cây",
+    gia: 350000,
+    gia_dinh_dang: "350,000₫",
+    anh: "img/sanpham/image121.jpg",
+    mo_ta: "12 cây từ 8B đến 2H, công nghệ SV-bonded chống gãy ngòi, nét vẽ mượt, sắc, than chì tinh khiết",
+    thuong_hieu: "Faber-Castell",
+    danh_muc: "but-chi"
+  },
+  {
+    id: 9,
+    ten: "Màu Nước Pan Tách Lớp White Nights Metamorphoses Set 12 Màu",
+    gia: 675000,
+    gia_dinh_dang: "675,000₫",
+    anh: "img/sanpham/image115.jpg",
+    mo_ta: "White Nights Metamorphoses là dòng màu nước hiệu ứng đặc biệt granulating/biến sắc cao cấp của Nevskaya Palitra (Nga), mang lại chiều sâu và bề mặt giàu cảm xúc cho tác phẩm",
+    thuong_hieu: "Nevskaya Palitra",
+    danh_muc: "mau-nuoc"
+  },
+  {
+    id: 10,
+    ten: "Màu Nước Nga Ladoga Artists' Watercolour 24 Màu",
+    gia: 720000,
+    gia_dinh_dang: "720,000₫",
+    anh: "img/sanpham/image117.jpg",
+    mo_ta: "Bộ màu nước dành cho nghệ sĩ Ladoga, 24 màu nước nén nhỏ gọn, bao gồm các phiên bản ấm và lạnh của màu cơ bản",
+    thuong_hieu: "Ladoga",
+    danh_muc: "mau-nuoc"
+  },
+  {
+    id: 11,
+    ten: "Màu Nước Gansai Tambi 100 Màu Phiên Bản Đặc Biệt (Hộp Gỗ)",
+    gia: 3990000,
+    gia_dinh_dang: "3,990,000₫",
+    anh: "img/sanpham/image112.jpg",
+    mo_ta: "KURETAKE GANSAI TAMBI 100 Color Set 4 là phiên bản giới hạn cao cấp gồm 100 màu nước Nhật Bản trong hộp gỗ sang trọng, kết hợp màu thường và các dòng special colors",
+    thuong_hieu: "Kuretake",
+    danh_muc: "mau-nuoc"
+  },
+  {
+    id: 12,
+    ten: "Màu Nước Kuretake Gansai IRODORI KOBAKO 6 Màu Kèm Cọ Và Bút Brush",
+    gia: 290000,
+    gia_dinh_dang: "290,000₫",
+    anh: "img/sanpham/image33.jpg",
+    mo_ta: "Màu nước truyền thống Nhật Bản dạng viên nén, độ đậm đặc cao, đi kèm bút nước brush pen và cây bút linh hoạt Mangaka chuyên nét đen",
+    thuong_hieu: "Kuretake",
+    danh_muc: "mau-nuoc"
+  },
+  {
+    id: 13,
+    ten: "Màu Vẽ Camel Premium Poster Colours 12 Màu x 15ml (Hộp Thiếc)",
+    gia: 190000,
+    gia_dinh_dang: "190,000₫",
+    anh: "img/sanpham/image43.jpg",
+    mo_ta: "Bộ màu poster chất lượng cao với 12 màu cơ bản, độ che phủ tốt, màu sắc tươi sáng, dễ sử dụng cho tranh poster, minh họa và trang trí",
+    thuong_hieu: "Camel",
+    danh_muc: "mau-ve"
+  },
+  {
+    id: 14,
+    ten: "Bộ 18/24/36/48 Màu Tuýp Acrylic 36ml | Mont Marte",
+    gia: 399000,
+    gia_dinh_dang: "399,000₫",
+    anh: "img/sanpham/image85.jpg",
+    mo_ta: "Mont Marte là thương hiệu đến từ Úc, màu acrylic tuyệt vời cho các dự án nghệ thuật và thủ công, sử dụng trên hầu hết bề mặt: canvas, bìa cứng, gỗ, giấy và da",
+    thuong_hieu: "Mont Marte",
+    danh_muc: "mau-ve"
+  },
+  {
+    id: 15,
+    ten: "Bộ 36 Màu Vẽ Vải Mont Marte Fabric 20ml",
+    gia: 645000,
+    gia_dinh_dang: "645,000₫",
+    anh: "img/sanpham/image87.jpg",
+    mo_ta: "Bao gồm 36 màu sắc rực rỡ từ trắng titan, vàng, đỏ, xanh, tím đến các màu kim loại và fluoro",
+    thuong_hieu: "Mont Marte",
+    danh_muc: "mau-ve"
+  },
+  {
+    id: 16,
+    ten: "Màu Acrylic Pastel Mont Marte 48 màu x 36ml",
+    gia: 959000,
+    gia_dinh_dang: "959,000₫",
+    anh: "img/sanpham/image91.jpg",
+    mo_ta: "Bộ sơn acrylic màu Pastel 36ml, tone màu kem và màu phấn mang đến bảng màu tuyệt vời cho các dự án thiết kế hiện đại",
+    thuong_hieu: "Mont Marte",
+    danh_muc: "mau-ve"
+  },
+  {
+    id: 17,
+    ten: "Màu Galeria Acrylic Paint 20 x 12ml Winsor & Newton",
+    gia: 850000,
+    gia_dinh_dang: "850,000₫",
+    anh: "img/sanpham/image93.jpg",
+    mo_ta: "Bộ sơn acrylic Winsor & Newton Galeria 20 x 12ml bao gồm sơn dành cho họa sĩ với tất cả các màu cơ bản để bắt đầu vẽ acrylic",
+    thuong_hieu: "Winsor & Newton",
+    danh_muc: "mau-ve"
+  },
+  {
+    id: 18,
+    ten: "Mực Vẽ Kháng Nước Camel Coloured Drawing Inks 20ml",
+    gia: 46000,
+    gia_dinh_dang: "46,000₫",
+    anh: "img/sanpham/image127.jpg",
+    mo_ta: "Mực vẽ màu kháng nước chất lượng cao, phù hợp cho vẽ minh họa, calligraphy, sketch, comic, màu sắc tươi sáng, độ bám tốt",
+    thuong_hieu: "Camel",
+    danh_muc: "mau-ve"
+  },
+  {
+    id: 19,
+    ten: "Sơn Dầu Cao Cấp Luster Kusakabe 20ml Tube",
+    gia: 269000,
+    gia_dinh_dang: "269,000₫",
+    anh: "img/sanpham/image68.jpg",
+    mo_ta: "Sơn dầu chuyên nghiệp cao cấp Nhật Bản, hiệu ứng ánh kim Metallic và ánh ngọc trai Polarization Pearl, đổi màu theo góc nhìn và ánh sáng",
+    thuong_hieu: "Kusakabe",
+    danh_muc: "mau-ve"
+  },
+  {
+    id: 20,
+    ten: "Giấy can Gateway A3 53g/m2 Imaging Series Tracing Paper",
+    gia: 580000,
+    gia_dinh_dang: "580,000₫",
+    anh: "img/sanpham/image25.jpg",
+    mo_ta: "Giấy can Gateway nhãn hiệu Anh Quốc, 500 tờ/hộp, ứng dụng tạo bản phim in offset, can bản vẽ xây dựng, kiến trúc, phong bì cưới, thiếp",
+    thuong_hieu: "Gateway",
+    danh_muc: "giay-ve"
+  },
+  {
+    id: 21,
+    ten: "Giấy Canson® Héritage 300gsm Cao Cấp (56x76cm)",
+    gia: 220000,
+    gia_dinh_dang: "220,000₫",
+    anh: "img/sanpham/image27.jpg",
+    mo_ta: "Canson Heritage Watercolor 100% cotton, chống thấm và thấm hút tốt, màu sắc sống động, phù hợp với tác phẩm đòi hỏi chất lượng và bảo quản vĩnh viễn",
+    thuong_hieu: "Canson",
+    danh_muc: "giay-ve"
+  },
+  {
+    id: 22,
+    ten: "Giấy Canson MOULIN DU ROY 300gsm 56x76cm",
+    gia: 199000,
+    gia_dinh_dang: "199,000₫",
+    anh: "img/sanpham/image30.png",
+    mo_ta: "Giấy vân cold-pressed, kháng mốc, 100% cotton cao cấp, cho phép washing nhiều lần, phù hợp vẽ màu nước, gouache và acrylic, Made in France",
+    thuong_hieu: "Canson",
+    danh_muc: "giay-ve"
+  },
+  {
+    id: 23,
+    ten: "Giấy vẽ Truyện Tranh HOLBEIN Maxon 135g A4 (40 tờ)",
+    gia: 199000,
+    gia_dinh_dang: "199,000₫",
+    anh: "img/sanpham/image3.jpg",
+    mo_ta: "Giấy không vân, mịn, kẻ sẵn khung tranh, bề mặt trơn nhẵn, dai, chống sờn, vẽ tốt với bút kim, bút sắt",
+    thuong_hieu: "Holbein",
+    danh_muc: "giay-ve"
+  },
+  {
+    id: 24,
+    ten: "Giấy Màu Nước BaoHong 100% Cotton Cuộn Academy | Artist's",
+    gia: 1935000,
+    gia_dinh_dang: "1,935,000₫",
+    anh: "img/sanpham/image5.jpg",
+    mo_ta: "Giấy không axit, 100% cotton dài 1.35x10m, 300gsm cold press, hấp thụ nhiều nước không bị cong vênh, thương hiệu hàng đầu Trung Quốc",
+    thuong_hieu: "BaoHong",
+    danh_muc: "giay-ve"
+  },
+  {
+    id: 25,
+    ten: "Giấy Vẽ Màu Nước Cao Cấp Saunders Waterford 300 | 638gsm (56x76cm)",
+    gia: 450000,
+    gia_dinh_dang: "450,000₫",
+    anh: "img/sanpham/image8.jpg",
+    mo_ta: "Saunders Waterford 100% cotton, sản xuất tại Anh, kết cấu ngẫu nhiên đặc trưng, chịu được chà xát và các kỹ thuật thô bạo, được Hiệp hội Màu nước Hoàng gia chứng nhận",
+    thuong_hieu: "Saunders Waterford",
+    danh_muc: "giay-ve"
+  },
+  {
+    id: 26,
+    ten: "Khay Pha Màu Mijello Fusion 18/24 Hàn Quốc",
+    gia: 294000,
+    gia_dinh_dang: "294,000₫",
+    anh: "img/sanpham/image39.jpg",
+    mo_ta: "Khay làm từ nhựa chống đạn bền chắc, dễ dàng tẩy rửa, bên trong chia nhiều ngăn để chứa màu",
+    thuong_hieu: "Mijello",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 27,
+    ten: "Khay Pha Màu Palette Sứ",
+    gia: 69000,
+    gia_dinh_dang: "69,000₫",
+    anh: "img/sanpham/image73.jpg",
+    mo_ta: "Khay pha màu hình hoa mai cao cấp bằng sứ, đường kính 13cm, trọng lượng nặng cầm chắc tay, tẩy rửa dễ dàng không bám màu",
+    thuong_hieu: "Khác",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 28,
+    ten: "Bảng pha màu đôi lớn",
+    gia: 45000,
+    gia_dinh_dang: "45,000₫",
+    anh: "img/sanpham/image56.jpg",
+    mo_ta: "Bảng pha màu kích thước lớn, tiện dụng cho pha trộn nhiều màu sắc",
+    thuong_hieu: "Khác",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 29,
+    ten: "Xịt Phủ Bóng Liquitex Satin Varnish 400ml",
+    gia: 457000,
+    gia_dinh_dang: "457,000₫",
+    anh: "img/sanpham/image20.jpg",
+    mo_ta: "Phủ kín tác phẩm acrylic bằng lớp satin trong suốt, bảo vệ khỏi tia cực tím, chống ố vàng và mờ sương, tăng độ sáng và độ bão hòa màu",
+    thuong_hieu: "Liquitex",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 30,
+    ten: "Professional Matte Gel Mờ Chuyên Nghiệp cho Acrylic 237ml",
+    gia: 335000,
+    gia_dinh_dang: "335,000₫",
+    anh: "img/sanpham/image23.jpg",
+    mo_ta: "Giảm độ bóng, tăng thể tích và làm dày, kéo dài thời gian mở, dùng làm chất kết dính cắt dán hoặc sơn lót tường",
+    thuong_hieu: "Khác",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 31,
+    ten: "Xịt Bảo Quản Tranh Chì & Phấn Màu của Winsor and Newton - Professional Fixative",
+    gia: 275000,
+    gia_dinh_dang: "275,000₫",
+    anh: "img/sanpham/image35.jpg",
+    mo_ta: "Xịt bảo quản chuyên nghiệp, Made in France, dung tích 400ml",
+    thuong_hieu: "Winsor & Newton",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 32,
+    ten: "Dung Môi Pha Và Tăng Độ Loang Màu Nước Superior",
+    gia: 119000,
+    gia_dinh_dang: "119,000₫",
+    anh: "img/sanpham/image37.jpg",
+    mo_ta: "Tạo hiệu ứng loang màu trong tranh màu nước, giúp chuyển màu mượt mà, tương thích với nhiều loại giấy màu nước",
+    thuong_hieu: "Superior",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 33,
+    ten: "Máy Thổi Sơn Bút Marker - Marker Spray Color Pen",
+    gia: 990000,
+    gia_dinh_dang: "990,000₫",
+    anh: "img/sanpham/image16.jpg",
+    mo_ta: "Súng thổi sơn bút marker, dùng cho graffiti, trang trí, phun màu đồng đều, sạc pin USB Type C",
+    thuong_hieu: "Superior",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 34,
+    ten: "Gọt Chì Quay Marie's 5 Cấp Độ (DMG82108)",
+    gia: 185000,
+    gia_dinh_dang: "185,000₫",
+    anh: "img/sanpham/image65.jpg",
+    mo_ta: "Gọt chì quay tay 5 mức điều chỉnh độ dài đầu chì, thiết kế ngòi dài, hộp chứa phoi lớn, đế chống trượt",
+    thuong_hieu: "Marie's",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 35,
+    ten: "Gọt Chì Quay Bằng Tay Miya HIMI Cao Cấp",
+    gia: 299000,
+    gia_dinh_dang: "299,000₫",
+    anh: "img/sanpham/image11.jpg",
+    mo_ta: "Dụng cụ gọt bằng tay thiết kế đẹp mắt, gọt bút chì nhanh chóng, hạn chế gãy ruột",
+    thuong_hieu: "Miya",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 36,
+    ten: "Chuốt Chì Tự Động Tenwin Bằng Pin",
+    gia: 109000,
+    gia_dinh_dang: "109,000₫",
+    anh: "img/sanpham/image82.jpg",
+    mo_ta: "Chuốt chì tự động, sử dụng pin AA, Made in China",
+    thuong_hieu: "Tenwin",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 37,
+    ten: "Compa Staedtler Gắn Bút Chì Cao Cấp (550 55)",
+    gia: 85000,
+    gia_dinh_dang: "85,000₫",
+    anh: "img/sanpham/image79.jpg",
+    mo_ta: "Compass Staedtler 550-55 nhập khẩu từ Đức, nhánh kẹp gá bút linh hoạt, đầu kim bo tròn an toàn, kèm hộp bảo vệ",
+    thuong_hieu: "Staedtler",
+    danh_muc: "phu-kien"
+  },
+  {
+    id: 38,
+    ten: "Bộ 12 Bút Dual Marker Tombow ABT Pro - FASHION",
+    gia: 840000,
+    gia_dinh_dang: "840,000₫",
+    anh: "img/sanpham/image62.jpg",
+    mo_ta: "Bút đánh dấu nghệ thuật đầu kép với đầu cọ linh hoạt và đầu đục, mực gốc cồn khô nhanh, phù hợp kiến trúc, thời trang và chế tác trang sức",
+    thuong_hieu: "Tombow",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 39,
+    ten: "Bộ 12 Bút Dual Marker Tombow ABT Pro - BASIC",
+    gia: 840000,
+    gia_dinh_dang: "840,000₫",
+    anh: "img/sanpham/image53.jpg",
+    mo_ta: "Bút đánh dấu nghệ thuật đầu kép với đầu cọ linh hoạt và đầu đục, mực gốc cồn khô nhanh, vĩnh viễn, tạo màu sắc rực rỡ",
+    thuong_hieu: "Tombow",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 40,
+    ten: "Set 6 Marker Touch Shinhan 2 Đầu Fine & Broad Made in Korea",
+    gia: 428000,
+    gia_dinh_dang: "428,000₫",
+    anh: "img/sanpham/image116.jpg",
+    mo_ta: "Bút dạ/marker 2 đầu Fine & Broad, sản xuất tại Hàn Quốc, thương hiệu Touch Shinhan",
+    thuong_hieu: "Touch Shinhan",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 41,
+    ten: "Các Set Bút Marker Cao Cấp Copic Ciao",
+    gia: 414000,
+    gia_dinh_dang: "414,000₫",
+    anh: "img/sanpham/image17.jpg",
+    mo_ta: "Bút marker cao cấp Copic Ciao, Made in Japan, nhiều set màu đa dạng",
+    thuong_hieu: "Copic",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 42,
+    ten: "Set A - Bút Marker Cao Cấp Copic Sketch 72 Màu (SK-72A)",
+    gia: 7200000,
+    gia_dinh_dang: "7,200,000₫",
+    anh: "img/sanpham/image19.jpg",
+    mo_ta: "72 màu cơ bản thường dùng trong thiết kế và minh họa, ngòi Super Brush và Medium Broad, hộp acrylic sang trọng",
+    thuong_hieu: "Copic",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 43,
+    ten: "Set B - Bút Marker Cao Cấp Copic Sketch 72 Màu (SK-72B)",
+    gia: 7200000,
+    gia_dinh_dang: "7,200,000₫",
+    anh: "img/sanpham/image14.jpg",
+    mo_ta: "Cân bằng tốt với các sắc thái từ mọi họ màu, nhiều màu đất lý tưởng cho chân dung và manga",
+    thuong_hieu: "Copic",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 44,
+    ten: "Set C - Bút Marker Cao Cấp Copic Sketch 72 Màu (SK-72C)",
+    gia: 7200000,
+    gia_dinh_dang: "7,200,000₫",
+    anh: "img/sanpham/image13.jpg",
+    mo_ta: "Bộ khởi đầu tuyệt vời, bao gồm nhiều lựa chọn màu xám cùng màu sắc tươi sáng",
+    thuong_hieu: "Copic",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 45,
+    ten: "Bộ Bút Marker Cao Cấp 204 Màu Touch Shinhan Hàn Quốc - Chính Hãng",
+    gia: 20000000,
+    gia_dinh_dang: "20,000,000₫",
+    anh: "img/sanpham/image83.jpg",
+    mo_ta: "Dòng marker hạng họa sĩ với màu sắc sống động, bộ full 204 màu kèm túi Fabric cao cấp, đầu Bush + medium-wide Chisel",
+    thuong_hieu: "Touch Shinhan",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 46,
+    ten: "Bút Dạ Quang Stabilo Neon HL72",
+    gia: 25000,
+    gia_dinh_dang: "25,000₫",
+    anh: "img/sanpham/image100.jpg",
+    mo_ta: "Bút dạ quang màu mực tươi sáng, mau khô, không lem, công nghệ chống khô 4 giờ, xuất xứ Đức",
+    thuong_hieu: "Stabilo",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 47,
+    ten: "Bút Dạ Quang Stabilo Boss Pastel HL70",
+    gia: 35000,
+    gia_dinh_dang: "35,000₫",
+    anh: "img/sanpham/image97.jpg",
+    mo_ta: "Bút dạ quang Stabilo sản xuất tại Đức, công nghệ chống khô mực 4 giờ, thân bút thiết kế kín",
+    thuong_hieu: "Stabilo",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 48,
+    ten: "Bút Dạ Quang Stabilo Swing Cool HL275",
+    gia: 29000,
+    gia_dinh_dang: "29,000₫",
+    anh: "img/sanpham/image101.jpg",
+    mo_ta: "Bút dạ quang Stabilo sản xuất tại Đức, công nghệ chống khô mực 4 giờ, thiết kế thân bút kín chặt chẽ",
+    thuong_hieu: "Stabilo",
+    danh_muc: "but-marker"
+  },
+  {
+    id: 49,
+    ten: "Cọ Vẽ Camel Synthetic Gold Brushes - Set 7 Cọ Vuông",
+    gia: 204000,
+    gia_dinh_dang: "204,000₫",
+    anh: "img/sanpham/image46.jpg",
+    mo_ta: "Bộ 7 cọ đầu vuông Camlin, sợi tổng hợp đàn hồi tốt, giữ màu khá, nhả màu đều, phù hợp màu nước, acrylic và gouache",
+    thuong_hieu: "Camel",
+    danh_muc: "co-ve"
+  },
+  {
+    id: 50,
+    ten: "Set 4 Cọ D212540010 Graduate của Daler Rowney",
+    gia: 405000,
+    gia_dinh_dang: "405,000₫",
+    anh: "img/sanpham/image49.jpg",
+    mo_ta: "Phù hợp cho cả màu nước, acrylic và sơn dầu, thương hiệu Daler Rowney, sản xuất tại Cộng hòa Dominica",
+    thuong_hieu: "Daler Rowney",
+    danh_muc: "co-ve"
+  },
+  {
+    id: 51,
+    ten: "Set 3 Cọ D212530006 Graduate của Daler Rowney",
+    gia: 315000,
+    gia_dinh_dang: "315,000₫",
+    anh: "img/sanpham/image52.jpg",
+    mo_ta: "Phù hợp cho cả màu nước, acrylic và sơn dầu, thương hiệu Daler Rowney, sản xuất tại Cộng hòa Dominica",
+    thuong_hieu: "Daler Rowney",
+    danh_muc: "co-ve"
+  },
+  {
+    id: 52,
+    ten: "Cọ Bản Vuông Sunway PX202 Lông Sóc Mix",
+    gia: 170000,
+    gia_dinh_dang: "170,000₫",
+    anh: "img/sanpham/image70.jpg",
+    mo_ta: "Cọ bản cao cấp Sunway Đài Loan, lông sóc tự nhiên kết hợp sợi nhân tạo, ngậm nước tốt, đầu vuông phẳng lý tưởng đi nền và kéo wash",
+    thuong_hieu: "Sunway",
+    danh_muc: "co-ve"
+  },
+  {
+    id: 53,
+    ten: "Balo Cặp Đựng Dụng Cụ Bảng Vẽ Giấy A3 P - Green",
+    gia: 220000,
+    gia_dinh_dang: "220,000₫",
+    anh: "img/sanpham/image41.jpg",
+    mo_ta: "Balo/cặp đựng dụng cụ vẽ khổ A3, thiết kế gọn gàng, nhiều ngăn tiện dụng, chất liệu vải dày bền, phù hợp học sinh mỹ thuật và họa sĩ",
+    thuong_hieu: "P-Green",
+    danh_muc: "tui-hop"
+  },
+  {
+    id: 54,
+    ten: "Bóp Đựng Bút, Cọ Có Ngăn Kéo Và Cuộn Vải Đen",
+    gia: 26000,
+    gia_dinh_dang: "26,000₫",
+    anh: "img/sanpham/image124.jpg",
+    mo_ta: "Túi đựng bút cọ 2 phần: phần đựng lớn và phần cuộn cài bút, chất vải đen hạn chế bạc màu, 2 kích thước 25cm và 30cm",
+    thuong_hieu: "Khác",
+    danh_muc: "tui-hop"
+  },
+  {
+    id: 55,
+    ten: "Tombow Marker Case Hộp Đựng 108 Màu ABT Dual Brush Pen",
+    gia: 690000,
+    gia_dinh_dang: "690,000₫",
+    anh: "img/sanpham/image108.jpg",
+    mo_ta: "Hộp đựng bền, di động, 108 khe cắm phù hợp bút lông kép Tombow, đế kiểu accordion mở ra để sử dụng trên bàn",
+    thuong_hieu: "Tombow",
+    danh_muc: "tui-hop"
+  }
+];

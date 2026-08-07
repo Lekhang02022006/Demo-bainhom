@@ -29,12 +29,17 @@
     <meta name="theme-color" content="#ffffff"> <!-- Màu thanh địa chỉ trên trình duyệt di động -->
     <!-- KẾT THÚC: Cấu hình Favicon -->
 
-    <!-- Nhúng file CSS của thư viện Bootstrap 5 để dàn trang và sử dụng các component có sẵn -->
+      <!-- css boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <!-- Nhúng file CSS cá nhân để tự custom giao diện theo ý muốn -->
+    <!-- mycss -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 
     <!-- Tiêu đề của trang web hiển thị trên tab trình duyệt -->
     <title>Liên Hệ | Góc Họa Sĩ</title>
@@ -42,16 +47,14 @@
 
 
 <body>
-    <header class=" sticky-top d-block">
-
-
+    <header class="sticky-top d-block">
 
         <nav class="navbar navbar-expand-lg custom-navbar">
 
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-5 col-sm-4 col-md-3 col-xl-2 logo">
-                        <a class="navbar-brand consectetur-fluid" href="index.html">
+                        <a class="navbar-brand" href="index.html">
                             <img src="img/logo.png" alt="" id="logo"></a>
                     </div>
 
@@ -98,7 +101,8 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link active fw-bold" aria-current="page" href="lienhe.html">LIÊN HỆ</a>
+                                        <a class="nav-link active fw-bold" aria-current="page" href="lienhe.html">LIÊN
+                                            HỆ</a>
                                     </li>
 
                                 </ul>
@@ -126,7 +130,7 @@
             <!-- my-5: Tạo khoảng cách lề trên và lề dưới (margin-top & margin-bottom) -->
             <!-- <div class="container my-5"> -->
             <!-- g-4: Khoảng cách giữa các cột trong row (gutter) -->
-            <div class="row g-3 my-5 px-sm-1">
+            <div class="row g-3 my-4 px-sm-1">
 
                 <!-- BÊN TRÁI: Khung chứa thông tin liên hệ và Form nhập thông tin -->
                 <!-- col-lg-6: Trên màn hình máy tính lớn chiếm 6/12 cột (nửa màn hình), mobile chiếm hết 100% -->
@@ -224,12 +228,12 @@
                         </li>
                         <li>
                             <a href="tel: 0349247635">
-                                <i class="fas fa-phone-alt" aria-hidden="true"></i> Tel: +84349247635
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i> Tel: 0349247635
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fas fa-fax" aria-hidden="true"></i> Fax: +84349247635
+                                <i class="fas fa-fax" aria-hidden="true"></i> Fax: 0349247635
                             </a>
                         </li>
                         <li>
@@ -271,7 +275,7 @@
 
         <!-- uk-totop: Tạo hiệu ứng cho mũi tên -->
         <!-- uk-scroll: giúp cuộn trang mượn hơn -->
-        <a id="sticky-to-top" href="#" uk-totop uk-scroll class="uk-icon uk-totop to-top">
+        <a id="sticky-to-top" class="to-top-hidden" href="#" uk-totop uk-scroll class="uk-icon uk-totop to-top">
             <i class="fas fa-chevron-up"></i>
         </a>
 
@@ -284,6 +288,21 @@
 
     <!-- Nhúng file Javascript cá nhân dùng để viết mã xử lý form hoặc các sự kiện trên trang -->
     <script type="text/javascript" src="script.js"></script>
+
+    
+    <script>
+        $(document).ready(function () {
+
+            // Gọi hàm kiểm tra khi trang load
+            checkVisibility_totop();
+            // Gọi hàm khi người dùng cuộn
+            $(window).scroll(function () {
+                checkVisibility_totop();
+            });
+
+        });
+
+    </script>
 
 </body>
 

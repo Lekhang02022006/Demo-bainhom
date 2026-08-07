@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi"> 
 
 <head>
     <meta charset="UTF-8">
@@ -36,9 +36,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-
     <!-- ĐỔI CHỔ NÀY -->
-    <title>Đăng Nhập | Góc Họa Sĩ</title>
+    <title>Chi Tiết Sản Phẩm | Góc Họa Sĩ</title>
 </head>
 
 
@@ -119,55 +118,50 @@
         </nav>
     </header>
 
-    <main>
-        <!-- ======================= PHẦN ĐĂNG NHẬP ======================= -->
-        <!-- Container Bootstrap -->
+    <main class="main-chitiet py-5">
         <div class="container">
+            <div class="row g-4">
 
-            <!-- Canh giữa theo chiều ngang -->
-            <div class="row justify-content-center my-4">
-
-                <!-- Chia cột -->
-                <div class="col-sm-10 col-md-8 col-lg-6 khung dangnhap p-4">
-
-                    <!-- Form đăng nhập -->
-                    <form action="" method="post" enctype="application/x-www-form-urlencoded" onsubmit="return login(this);">
-
-                        <fieldset>
-
-                            <h2>ĐĂNG NHẬP TÀI KHOẢN</h2>
-                            
-                            <div class="dangnhap-item my-2">
-
-                                <label for="LoginUserEmail">Email *</label>
-                                <!-- type email sẽ kiếm tra email cho mình luôn -->
-                                <input type="email" name="email" id="LoginUserEmail" class="form-control"
-                                    placeholder="Email" autocomplete="email">
-                            </div>
-
-                            <div class="dangnhap-item my-2">
-                                <label for="LoginUserPassword">Mật khẩu *</label>
-                                <input type="password" name="psw" id="LoginUserPassword" class="form-control"
-                                    placeholder="Mật khẩu" autocomplete="current-password">
-
-                            </div>
-
-                            <div>
-                                <input type="checkbox" name="remember" id="remember" class="dangnhap-checkbox">
-                                <label for="remember">Ghi nhớ cho lần đăng nhập sau</label>
-                            </div>
-
-                            <input type="submit" value="Đăng nhập" class="button my-2">
-
-                            
-
-                        </fieldset>
-                    </form>
-                    <a href="#">Quên mật khẩu?</a>
-                    <a href="dangky.html">Bạn chưa có tài khoản?</a>
-
+                <!-- Ảnh-->
+                <div class="col-lg-4 col-md-3 col-sm-4 col-12">
+                    <div class="chitiet-anh">
+                        <img src="img/sanpham/image1.jpg" alt="Bộ chì màu 120 màu Kalour">
+                    </div>
                 </div>
 
+                <!-- Thông tin cho sản phẩm -->
+                <div class="col-lg-8 col-md-9 col-sm-8 col-12">
+                    <div class="chitietsanpham">
+
+                        <div class="chitiet-ten">
+                            <h3>Bộ Chì Màu 120 Màu Kalour</h3>
+                        </div>
+
+                        <div class="chitiet-mota">
+                            <p>Bút chì màu cao cấp hãng Yover với hộp thiếc cao cấp chất màu tốt phù hợp mọi đối tượng
+                                sử dụng thiết kế hộp thiếc gọn gàng nhiều lớp màu mang theo bên mình thật dễ dàng</p>
+                        </div>
+
+                        <div class="chitiet-giatien">
+                            <p>750,000đ</p>
+                        </div>
+
+                        <div class="chitiet-soluong">
+                            <label>Số lượng:</label>
+                            <input type="number" value="1" min="1" max="50">
+                        </div>
+
+                        <div class="chitiet-nut">
+                            <div class="chitiet-nut_mua">
+                                <button class="button" onclick="purchasingProducts()">Mua ngay</button>
+                            </div>
+                            <div class="chitiet-nut_themgiohang">
+                                <button class="button" onclick="addToCartFromDetail()">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -245,6 +239,8 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
+    <!-- Dữ diệu danh sách sản phẩm -->
+    <script src="data.js"></script>
     <!-- myjs -->
     <script type="text/javascript" src="script.js"></script>
 

@@ -44,16 +44,14 @@
 
 
 <body>
-    <header class=" sticky-top d-block">
-
-
+    <header class="sticky-top d-block">
 
         <nav class="navbar navbar-expand-lg custom-navbar">
 
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-5 col-sm-4 col-md-3 col-xl-2 logo">
-                        <a class="navbar-brand consectetur-fluid" href="index.html">
+                        <a class="navbar-brand" href="index.html">
                             <img src="img/logo.png" alt="" id="logo"></a>
                     </div>
 
@@ -100,7 +98,8 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link active fw-bold" aria-current="page" href="lienhe.html">LIÊN HỆ</a>
+                                        <a class="nav-link active fw-bold" aria-current="page" href="lienhe.html">LIÊN
+                                            HỆ</a>
                                     </li>
 
                                 </ul>
@@ -120,7 +119,6 @@
             </div>
         </nav>
     </header>
-
 
 
     <main>
@@ -146,7 +144,6 @@
             <!-- GÓC HỌA SĨ -->
             <div class="row g-3 my-4 justify-content-center gioithieu-item gioithieu-even">
                 <h3 class="border-bottom col-sm-10">Góc họa sĩ</h3>
-
 
                 <div class="col-12 col-sm-10 col-lg-6">
                     <p class="gioithieu-noidung"><b>"Góc Họa Sĩ"</b> ra đời từ chính ước mơ ấy, và mong muốn giản dị:
@@ -200,12 +197,12 @@
                         </li>
                         <li>
                             <a href="tel: 0349247635">
-                                <i class="fas fa-phone-alt" aria-hidden="true"></i> Tel: +84349247635
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i> Tel: 0349247635
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fas fa-fax" aria-hidden="true"></i> Fax: +84349247635
+                                <i class="fas fa-fax" aria-hidden="true"></i> Fax: 0349247635
                             </a>
                         </li>
                         <li>
@@ -247,7 +244,7 @@
 
         <!-- uk-totop: Tạo hiệu ứng cho mũi tên -->
         <!-- uk-scroll: giúp cuộn trang mượn hơn -->
-        <a id="sticky-to-top" href="#" uk-totop uk-scroll class="uk-icon uk-totop to-top">
+        <a id="sticky-to-top" class="to-top-hidden" href="#" uk-totop uk-scroll class="uk-icon uk-totop to-top">
             <i class="fas fa-chevron-up"></i>
         </a>
 
@@ -265,15 +262,18 @@
         $(document).ready(function () {
 
             // Gọi hàm kiểm tra khi trang load
-            checkVisibility();
-
+            checkVisibility_gioithieu();
+            checkVisibility_totop();
             // Gọi hàm khi người dùng cuộn
             $(window).scroll(function () {
-                checkVisibility();
+                checkVisibility_gioithieu();
+                checkVisibility_totop();
             });
 
         });
     </script>
+    
+
 </body>
 
 </html>

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- css boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- mycss -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <script src="data.js"></script>
+
+    <title>Sản Phẩm | Góc Họa Sĩ</title>
+</head>
+
+<body>
+    <header class="sticky-top d-block">
+
+        <nav class="navbar navbar-expand-lg custom-navbar">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-5 col-sm-4 col-md-3 col-xl-2 logo">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/logo.png" alt="" id="logo"></a>
+                    </div>
+
+                    <div class="col-7 col-sm-8 col-md col-xl d-flex flex-column">
+
+                        <div class="row">
+                            <div class=" col d-flex justify-content-end ">
+
+                                <a href="giohang.html" class="shopping-cart">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                                <!-- <i class="fas fa-user-alt" aria-hidden="true"></i> -->
+                                <a href="dangnhap.html" class="user">Đăng Nhập</a>
+                                <a href="dangky.html" class="user">Đăng Ký</a>
+
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="d-flex justify-content-end">
+                                <button class="navbar-toggler w-auto" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+
+                            <div class="collapse navbar-collapse my-1" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active fw-bold" aria-current="page" href="index.html">TRANG
+                                            CHỦ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active fw-bold" aria-current="page"
+                                            href="gioithieu.html">GIỚI THIỆU</a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link active fw-bold" aria-current="page" href="sanpham.html"> SẢN
+                                            PHẨM
+                                        </a>
+
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link active fw-bold" aria-current="page" href="lienhe.html">LIÊN
+                                            HỆ</a>
+                                    </li>
+
+                                </ul>
+                                <form class="d-flex justify-content-end form-search-box ms-auto" role="search">
+                                    <input class="form-control me-2 search-box" type="search" placeholder="Search"
+                                        aria-label="Search" />
+                                    <button class="btn btn-custom-search" type="submit"><i
+                                            class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </nav>
+    </header>
+    <main class="main-sanpham py-4">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-md-4 col-xl-3 d-none d-md-block">
+                    <div class="danhmuc">
+                        <h5 class="fw-bold border-bottom pb-2">DANH MỤC SẢN PHẨM</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#but-chi">Bút chì màu & Phác thảo</a></li>
+                            <li><a href="#mau-nuoc">Màu nước</a></li>
+                            <li><a href="#mau-ve">Màu vẽ chuyên nghiệp</a></li>
+                            <li><a href="#giay-ve">Giấy vẽ chuyên dụng</a></li>
+                            <li><a href="#phu-kien">Phụ kiện & Dụng cụ vẽ</a></li>
+                            <li><a href="#but-marker">Bút Marker</a></li>
+                            <li><a href="#co-ve">Cọ vẽ & Bút vẽ</a></li>
+                            <li><a href="#tui-hop">Túi & Hộp đựng dụng cụ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <article>
+                        <section class="loai mb-5" id="but-chi">
+                            <h2 class="loai-tieude border-bottom pb-2 mb-3">BÚT CHÌ MÀU & PHÁC THẢO</h2>
+                            <div class="row g-3">
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="1">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image1.jpg" alt="Bộ chì màu 120 màu Kalour">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bộ Chì Màu 120 Màu Kalour</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">750,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="1"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="2">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image98.jpg" alt="Bộ chì màu 180 màu Kalour">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bộ Chì Màu 180 Màu Kalour</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">990,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="3">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image109.jpg" alt="Bộ chì màu 180 màu Kalour">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bộ Chì Màu 180 Màu Kalour (Hình Con Hươu Đỏ)</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">1,050,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="3"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="4">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image66.png"
+                                                alt="Ngòi bút chì Uniball UL-S Smudge-Proof">
+                                        </div>
+                                        <h3 class="sanpham-ten">Ngòi Bút Chì Uniball UL-S Smudge-Proof Leads</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">45,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="4"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="5">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image67.png"
+                                                alt="Bút chì kẹp lõi 2.0mm Uniball MH-500">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bút Chì Kẹp Lõi 2.0mm MH-500 Uniball Nhật Bản</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">123,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="6">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image58.png" alt="Bút chì bấm lắc Tombow BST SHIMMER">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bút Chì Bấm Lắc Tombow BST SHIMMER Lấp Lánh 0.5mm</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">95,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="6"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="7">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image110.jpg"
+                                                alt="Set 12 bút chì phác thảo Tombow Mono">
+                                        </div>
+                                        <h3 class="sanpham-ten">Set 12 Bút Chì Phác Thảo Cao Cấp Tombow Mono (4H-6B)
+                                            Tặng Kèm Gôm</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">450,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="7"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="8">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image121.jpg"
+                                                alt="Chì phác thảo Faber-Castell 9000 hộp thiếc">
+                                        </div>
+                                        <h3 class="sanpham-ten">Chì Phác Thảo Faber-Castell 9000 Pencils Hộp Thiếc 12
+                                            Cây</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">350,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="8"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="loai mb-5" id="mau-nuoc">
+                            <h2 class="loai-tieude border-bottom pb-2 mb-3">MÀU NƯỚC CHUYÊN NGHIỆP</h2>
+                            <div class="row g-3">
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="9">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image115.jpg"
+                                                alt="Màu nước White Nights Metamorphoses 12 màu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Màu Nước Pan Tách Lớp White Nights Metamorphoses Set 12
+                                            Màu</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">675,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="9"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="10">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image117.jpg" alt="Màu nước Ladoga 24 màu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Màu Nước Nga Ladoga Artists' Watercolour 24 Màu</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">720,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="10"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="11">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image112.jpg"
+                                                alt="Màu nước Gansai Tambi 100 màu hộp gỗ">
+                                        </div>
+                                        <h3 class="sanpham-ten">Màu Nước Gansai Tambi 100 Màu Phiên Bản Đặc Biệt (Hộp
+                                            Gỗ)</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">3,990,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="11"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="12">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image33.jpg"
+                                                alt="Màu nước Kuretake Gansai Irodori Kobako 6 màu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Màu Nước Kuretake Gansai IRODORI KOBAKO 6 Màu Kèm Cọ Và
+                                            Bút Brush</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">290,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="12"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="loai mb-5" id="mau-ve">
+                            <h2 class="loai-tieude border-bottom pb-2 mb-3">MÀU VẼ CHUYÊN NGHIỆP</h2>
+                            <div class="row g-3">
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="13">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image43.jpg" alt="Màu vẽ Camel Premium Poster 12 màu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Màu Vẽ Camel Premium Poster Colours 12 Màu x 15ml (Hộp
+                                            Thiếc)</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">190,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="13"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="14">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image85.jpg" alt="Bộ màu acrylic Mont Marte 36ml">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bộ 18/24/36/48 Màu Tuýp Acrylic 36ml | Mont Marte</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">399,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="14"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="15">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image87.jpg" alt="Màu vẽ vải Mont Marte 36 màu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bộ 36 Màu Vẽ Vải Mont Marte Fabric 20ml</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">645,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="15"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="16">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image91.jpg"
+                                                alt="Màu acrylic pastel Mont Marte 48 màu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Màu Acrylic Pastel Mont Marte 48 màu x 36ml</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">959,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="16"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="17">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image93.jpg"
+                                                alt="Màu acrylic Galeria Winsor & Newton 20x12ml">
+                                        </div>
+                                        <h3 class="sanpham-ten">Màu Galeria Acrylic Paint 20 x 12ml Winsor & Newton</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">850,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="17"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="18">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image127.jpg" alt="Mực vẽ kháng nước Camel 20ml">
+                                        </div>
+                                        <h3 class="sanpham-ten">Mực Vẽ Kháng Nước Camel Coloured Drawing Inks 20ml</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">46,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="18"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="19">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image68.jpg" alt="Sơn dầu Luster Kusakabe 20ml">
+                                        </div>
+                                        <h3 class="sanpham-ten">Sơn Dầu Cao Cấp Luster Kusakabe 20ml Tube</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">269,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="19"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="loai mb-5" id="giay-ve">
+                            <h2 class="loai-tieude border-bottom pb-2 mb-3">GIẤY VẼ CHUYÊN DỤNG</h2>
+                            <div class="row g-3">
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="20">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image25.jpg" alt="Giấy can Gateway A3">
+                                        </div>
+                                        <h3 class="sanpham-ten">Giấy can Gateway A3 53g/m2 Imaging Series Tracing Paper
+                                        </h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">580,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="20"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="21">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image27.jpg" alt="Giấy Canson Héritage 300gsm">
+                                        </div>
+                                        <h3 class="sanpham-ten">Giấy Canson® Héritage 300gsm Cao Cấp (56x76cm)</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">220,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="21"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="22">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image30.png" alt="Giấy Canson Moulin Du Roy 300gsm">
+                                        </div>
+                                        <h3 class="sanpham-ten">Giấy Canson MOULIN DU ROY 300gsm 56x76cm</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">199,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="22"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="23">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image3.jpg" alt="Giấy vẽ truyện tranh Holbein Maxon">
+                                        </div>
+                                        <h3 class="sanpham-ten">Giấy vẽ Truyện Tranh HOLBEIN Maxon 135g A4 (40 tờ)</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">199,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="23"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="24">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image5.jpg" alt="Giấy màu nước BaoHong cuộn">
+                                        </div>
+                                        <h3 class="sanpham-ten">Giấy Màu Nước BaoHong 100% Cotton Cuộn Academy |
+                                            Artist's</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">1,935,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="24"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="25">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image8.jpg" alt="Giấy Saunders Waterford 638gsm">
+                                        </div>
+                                        <h3 class="sanpham-ten">Giấy Vẽ Màu Nước Cao Cấp Saunders Waterford 300 | 638gsm
+                                            (56x76cm)</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">450,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="loai mb-5" id="phu-kien">
+                            <h2 class="loai-tieude border-bottom pb-2 mb-3">PHỤ KIỆN & DỤNG CỤ VẼ</h2>
+                            <div class="row g-3">
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="26">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image39.jpg" alt="Khay pha màu Mijello Fusion">
+                                        </div>
+                                        <h3 class="sanpham-ten">Khay Pha Màu Mijello Fusion 18/24 Hàn Quốc</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">294,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="26"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="27">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image73.jpg" alt="Khay pha màu palette sứ">
+                                        </div>
+                                        <h3 class="sanpham-ten">Khay Pha Màu Palette Sứ</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">69,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="27"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="28">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image56.jpg" alt="Bảng pha màu đôi lớn">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bảng pha màu đôi lớn</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">45,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="28"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="29">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image20.jpg"
+                                                alt="Xịt phủ bóng Liquitex Satin Varnish">
+                                        </div>
+                                        <h3 class="sanpham-ten">Xịt Phủ Bóng Liquitex Satin Varnish 400ml</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">457,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="29"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="30">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image23.jpg" alt="Professional Matte Gel cho acrylic">
+                                        </div>
+                                        <h3 class="sanpham-ten">Professional Matte Gel Mờ Chuyên Nghiệp cho Acrylic
+                                            237ml</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">335,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="30"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="31">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image35.jpg" alt="Xịt bảo quản tranh Winsor & Newton">
+                                        </div>
+                                        <h3 class="sanpham-ten">Xịt Bảo Quản Tranh Chì & Phấn Màu của Winsor and Newton
+                                            - Professional Fixative</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">275,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="31"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="32">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image37.jpg" alt="Dung môi loang màu nước Superior">
+                                        </div>
+                                        <h3 class="sanpham-ten">Dung Môi Pha Và Tăng Độ Loang Màu Nước Superior</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">119,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="32"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="33">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image16.jpg" alt="Máy thổi sơn bút marker">
+                                        </div>
+                                        <h3 class="sanpham-ten">Máy Thổi Sơn Bút Marker - Marker Spray Color Pen</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">990,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="33"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="34">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image65.jpg" alt="Gọt chì quay Marie's 5 cấp độ">
+                                        </div>
+                                        <h3 class="sanpham-ten">Gọt Chì Quay Marie's 5 Cấp Độ (DMG82108)</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">185,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="34"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="35">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image11.jpg" alt="Gọt chì quay tay Miya HIMI">
+                                        </div>
+                                        <h3 class="sanpham-ten">Gọt Chì Quay Bằng Tay Miya HIMI Cao Cấp</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">299,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="35"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="36">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image82.jpg" alt="Chuốt chì tự động Tenwin bằng pin">
+                                        </div>
+                                        <h3 class="sanpham-ten">Chuốt Chì Tự Động Tenwin Bằng Pin</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">109,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="36"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="37">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image79.jpg" alt="Compa Staedtler gắn bút chì">
+                                        </div>
+                                        <h3 class="sanpham-ten">Compa Staedtler Gắn Bút Chì Cao Cấp (550 55)</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">85,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="37"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="loai mb-5" id="but-marker">
+                            <h2 class="loai-tieude border-bottom pb-2 mb-3">BÚT MARKER CHUYÊN NGHIỆP & BÚT DẠ QUANG</h2>
+                            <div class="row g-3">
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="38">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image62.jpg"
+                                                alt="Bộ 12 bút dual marker Tombow ABT Pro Fashion">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bộ 12 Bút Dual Marker Tombow ABT Pro - FASHION</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">840,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="38"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="39">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image53.jpg"
+                                                alt="Bộ 12 bút dual marker Tombow ABT Pro Basic">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bộ 12 Bút Dual Marker Tombow ABT Pro - BASIC</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">840,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="39"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="40">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image116.jpg" alt="Set 6 marker Touch Shinhan 2 đầu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Set 6 Marker Touch Shinhan 2 Đầu Fine & Broad Made in
+                                            Korea</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">428,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="40"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="41">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image17.jpg" alt="Các set bút marker Copic Ciao">
+                                        </div>
+                                        <h3 class="sanpham-ten">Các Set Bút Marker Cao Cấp Copic Ciao</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">414,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="41"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="42">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image19.jpg" alt="Set A Copic Sketch 72 màu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Set A - Bút Marker Cao Cấp Copic Sketch 72 Màu (SK-72A)
+                                        </h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">7,200,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="42"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="43">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image14.jpg" alt="Set B Copic Sketch 72 màu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Set B - Bút Marker Cao Cấp Copic Sketch 72 Màu (SK-72B)
+                                        </h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">7,200,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="43"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="44">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image13.jpg" alt="Set C Copic Sketch 72 màu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Set C - Bút Marker Cao Cấp Copic Sketch 72 Màu (SK-72C)
+                                        </h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">7,200,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="44"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="45">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image83.jpg" alt="Bộ 204 màu Touch Shinhan Hàn Quốc">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bộ Bút Marker Cao Cấp 204 Màu Touch Shinhan Hàn Quốc -
+                                            Chính Hãng</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">20,000,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="45"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="46">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image100.jpg" alt="Bút dạ quang Stabilo Neon HL72">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bút Dạ Quang Stabilo Neon HL72</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">25,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="46"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="47">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image97.jpg"
+                                                alt="Bút dạ quang Stabilo Boss Pastel HL70">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bút Dạ Quang Stabilo Boss Pastel HL70</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">35,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="47"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="48">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image101.jpg"
+                                                alt="Bút dạ quang Stabilo Swing Cool HL275">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bút Dạ Quang Stabilo Swing Cool HL275</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">29,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="48"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="loai mb-5" id="co-ve">
+                            <h2 class="loai-tieude border-bottom pb-2 mb-3">CỌ VẼ & BÚT VẼ CHUYÊN NGHIỆP</h2>
+                            <div class="row g-3">
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="49">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image46.jpg"
+                                                alt="Cọ vẽ Camel Synthetic Gold set 7 cọ vuông">
+                                        </div>
+                                        <h3 class="sanpham-ten">Cọ Vẽ Camel Synthetic Gold Brushes - Set 7 Cọ Vuông</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">204,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="49"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="50">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image49.jpg" alt="Set 4 cọ Daler Rowney Graduate">
+                                        </div>
+                                        <h3 class="sanpham-ten">Set 4 Cọ D212540010 Graduate của Daler Rowney</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">405,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="50"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="51">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image52.jpg" alt="Set 3 cọ Daler Rowney Graduate">
+                                        </div>
+                                        <h3 class="sanpham-ten">Set 3 Cọ D212530006 Graduate của Daler Rowney</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">315,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="51"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="52">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image70.png"
+                                                alt="Cọ bản vuông Sunway PX202 lông sóc mix">
+                                        </div>
+                                        <h3 class="sanpham-ten">Cọ Bản Vuông Sunway PX202 Lông Sóc Mix</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">170,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="52"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="loai mb-5" id="tui-hop">
+                            <h2 class="loai-tieude border-bottom pb-2 mb-3">TÚI & HỘP ĐỰNG DỤNG CỤ</h2>
+                            <div class="row g-3">
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="53">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image41.jpg"
+                                                alt="Balo cặp đựng dụng cụ vẽ A3 P-Green">
+                                        </div>
+                                        <h3 class="sanpham-ten">Balo Cặp Đựng Dụng Cụ Bảng Vẽ Giấy A3 P - Green</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">220,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="53"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="54">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image124.jpg"
+                                                alt="Bóp đựng bút cọ có ngăn kéo và cuộn vải đen">
+                                        </div>
+                                        <h3 class="sanpham-ten">Bóp Đựng Bút, Cọ Có Ngăn Kéo Và Cuộn Vải Đen</h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">26,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="54"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 trangchu-hidden">
+                                    <div class="sanpham" data-id="55">
+                                        <div class="sanpham-anh">
+                                            <img src="img/sanpham/image108.jpg" alt="Hộp đựng Tombow marker 108 màu">
+                                        </div>
+                                        <h3 class="sanpham-ten">Tombow Marker Case Hộp Đựng 108 Màu ABT Dual Brush Pen
+                                        </h3>
+                                        <div class="sanpham-gia-hang">
+                                            <p class="sanpham-gia">690,000₫</p>
+                                            <i class="fa-solid fa-basket-shopping sanpham-icon" data-id="55"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Liên lạc</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.google.com/maps/place/%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%E1%BA%A7n+Th%C6%A1/@10.0299337,105.7680404,1057m/data=!3m2!1e3!4b1!4m6!3m5!1s0x31a0895a51d60719:0x9d76b0035f6d53d0!8m2!3d10.0299337!4d105.7706153!16s%2Fm%2F02r6wmy?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Khu 2, Đ. 3/2, P.Ninh Kiều, TP.
+                                Cần Thơ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel: 0349247635">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i> Tel: 0349247635
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-fax" aria-hidden="true"></i> Fax: 0349247635
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto: khangb2405036@student.ctu.edu.vn">
+                                <i class="fas fa-envelope" aria-hidden="true"></i> Mail:
+                                khangb2405036@student.ctu.edu.vn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm">
+                    <h3>Mạng xã hội</h3>
+                    <div class="d-flex justify-content-center">
+                        <a href="" class="social iconfa-facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="" class="social iconfa-youtube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="" class="social iconfa-tiktok" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="" class="social iconfa-instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <hr>
+
+        <div class="d-sm-flex d-block footer-end justify-content-center align-items-center text-center py-2">
+            <p class="mb-0">&copy; Đây là bài tập của nhóm 02.</p>
+            <p class="mb-0"> Không phải là trang web mua bán !!! 🐳🐳🐳 </p>
+        </div>
+
+        <!-- uk-totop: Tạo hiệu ứng cho mũi tên -->
+        <!-- uk-scroll: giúp cuộn trang mượn hơn -->
+        <a id="sticky-to-top" class="to-top-hidden" href="#" uk-totop uk-scroll class="uk-icon uk-totop to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="script.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            // Gọi hàm kiểm tra khi trang load
+            checkVisibility_trangchu();
+            checkVisibility_totop();
+            // Gọi hàm khi người dùng cuộn
+            $(window).scroll(function () {
+                checkVisibility_trangchu();
+                checkVisibility_totop();
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
