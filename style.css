@@ -322,25 +322,6 @@ footer h3 {
     font-size: 20px;
 }
 
-.gioithieu-item {
-    opacity: 0;
-    transition: all 0.8s ease;
-}
-
-/* Cái mà có lớp item và odd */
-.gioithieu-item.gioithieu-odd {
-    transform: translateX(-100px);
-}
-
-.gioithieu-item.gioithieu-even {
-    transform: translateX(100px);
-}
-
-.gioithieu-item.gioithieu-visible {
-    opacity: 1;
-    transform: translate(0px) !important;
-}
-
 
 /* =========================== SẢN PHẨM =========================== */
 

@@ -41,23 +41,6 @@ function checkVisibility_trangchu() {
     }
   })
 };
-// =========================== GIỚI THIỆU =======================
-function checkVisibility_gioithieu() {
-  var scrollTop = $(window).scrollTop();
-  var windowHeight = $(window).height();
-
-  $('.gioithieu-item').each(function () {
-    var $item = $(this);
-    if ($item.hasClass('gioithieu-visible')) return;
-    var itemTop = $item.offset().top;
-    var triggerPoint = itemTop - windowHeight + 100;
-
-    if (scrollTop > triggerPoint) {
-      $item.addClass('gioithieu-visible');
-    }
-  })
-};
-
 
 //================== CHITTIETSANPHAM ==================//
 

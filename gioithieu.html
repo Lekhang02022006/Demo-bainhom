@@ -125,9 +125,9 @@
         <div class="container">
 
             <!-- "GỐC" HỌA SĨ -->
-            <div class="row g-3 my-4 justify-content-center gioithieu-item gioithieu-odd">
+            <div class="row g-3 my-4 justify-content-center gioithieu-item trangchu-hidden">
                 <h3 class="border-bottom col-sm-10">"Gốc" Họa Sĩ</h3>
-                <div class="col-8 col-sm-5  col-lg-3 mx-5">
+                <div class="col-12 col-sm-5  col-lg-3 mx-5">
                     <img src="img/gioithieu/img1.jpg" alt="" class="khung">
                 </div>
 
@@ -142,7 +142,7 @@
             </div>
 
             <!-- GÓC HỌA SĨ -->
-            <div class="row g-3 my-4 justify-content-center gioithieu-item gioithieu-even">
+            <div class="row g-3 my-4 justify-content-center gioithieu-item trangchu-hidden">
                 <h3 class="border-bottom col-sm-10">Góc họa sĩ</h3>
 
                 <div class="col-12 col-sm-10 col-lg-6">
@@ -154,15 +154,15 @@
                         huyết và tình yêu dành cho nghệ thuật. Chúng mình không bán hàng, chúng mình tiếp sức cho những
                         ước mơ.</p>
                 </div>
-                <div class="col-8 col-sm-5  col-lg-3 mx-5">
+                <div class="col-12 col-sm-5  col-lg-3 mx-5">
                     <img src="img/gioithieu/img2.jpg" alt="" class="khung">
                 </div>
             </div>
 
             <!-- GÓC HỌA "SĨ" -->
-            <div class="row g-3 my-4 justify-content-center gioithieu-item gioithieu-odd">
+            <div class="row g-3 my-4 justify-content-center gioithieu-item trangchu-hidden">
                 <h3 class="border-bottom col-sm-10">GÓC HỌA "SĨ"</h3>
-                <div class="col-8 col-sm-5  col-lg-3 mx-5">
+                <div class="col-12 col-sm-5  col-lg-3 mx-5">
                     <img src="img/gioithieu/img3.jpg" alt="" class="khung">
                 </div>
 
@@ -262,11 +262,11 @@
         $(document).ready(function () {
 
             // Gọi hàm kiểm tra khi trang load
-            checkVisibility_gioithieu();
+            checkVisibility_trangchu();
             checkVisibility_totop();
             // Gọi hàm khi người dùng cuộn
             $(window).scroll(function () {
-                checkVisibility_gioithieu();
+                checkVisibility_trangchu();
                 checkVisibility_totop();
             });
 
