@@ -335,7 +335,7 @@ function signup(frm) {
 
   // Kiểm tra nhập lại mật khẩu
   if (password2.value.trim().length < 8 || password.value != password2.value) {
-    alert("Nhập lại mật khẩu dưới 8 ký tự hoặc không khớp với mật khẩu");
+    alert("Nhập lại mật khẩu của bạn đang dưới 8 ký tự hoặc không khớp với mật khẩu ở trên");
     return false;
   }
 
