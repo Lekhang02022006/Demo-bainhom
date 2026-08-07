@@ -123,22 +123,18 @@ function addToCart(productId) {
       return;
     }
 
-    // function findProduct(productId) {
-    //   for (var i = 0; i < itemList.length; i++) {
-    //     if (itemList[i].id === productId) {
-    //       return itemList[i];
-    //     }
-    //   }
+    function findProduct(productId) {
+      for (var i = 0; i < itemList.length; i++) {
+        if (itemList[i].id === productId) {
+          return itemList[i];
+        }
+      }
 
-    //   return null;
-    // }
+      return null;
+    }
 
-    // var product = findProduct(productId);
-
-    var product = itemList.find(item => item.id === productId);
-
-
-
+    var product = findProduct(productId);
+  
     if (product) {
       cart.push({
         id: product.id,

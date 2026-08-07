@@ -1,0 +1,5 @@
+B2405036 Lê Tuấn Khang : Header/Footer, trang Trang chủ, trang Giới thiệu 
+B2404974 Võ Ngọc Kỳ Anh: trang Sản Phẩm, trang Chi Tiết Sản Phẩm, Rule dùng chung của CSS
+B2410707 Ngô Trần Phúc Bảo: trang Giỏ hàng
+B2408855 Nguyễn Minh Kha: trang Đăng nhập, trang Đăng Ký, kiếm thông tin sản Phẩm
+B2408803 Nguyễn Thị Thoại Mỹ: trang Liên Hệ, thiết kế poster, nội dung
