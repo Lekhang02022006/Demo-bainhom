@@ -3,10 +3,8 @@
 function checkVisibility_totop() {
   var $toTop = $('#sticky-to-top');
 
-  // Lấy vị trí cuộn hiện tại
-  var scrollTop = $(this).scrollTop();
+  var scrollTop = $(window).scrollTop();
 
-  // Nếu cuộn xuống hơn 100px
   if (scrollTop > 100) {
     $toTop.addClass('to-top-show');
   } else {
@@ -14,12 +12,11 @@ function checkVisibility_totop() {
   }
 };
 
-// =========================== TRANG CHU =======================
+// =========================== TRANG CHỦ =======================
 // Hàm kiểm tra và hiển thị nội dung
 function checkVisibility_trangchu() {
-  // Lấy vị trí cuộn hiện tại
+
   var scrollTop = $(window).scrollTop();
-  // Lấy chiều cao cửa sổ trình duyệt
   var windowHeight = $(window).height();
 
   // Duyệt qua từng nội dung
@@ -27,22 +24,28 @@ function checkVisibility_trangchu() {
     var $item = $(this);
 
     if ($item.hasClass('trangchu-show')) return;
-    // Lấy vị trí của nội dung so với top trang
     var itemTop = $item.offset().top;
 
-    // Tính toán vị trí để hiển thị
-    // Khi nội dung vào giữa màn hình (có thể điều chỉnh)
     var triggerPoint = itemTop - windowHeight + 100;
 
-    // Nếu đã cuộn đến vị trí cần hiển thị
     if (scrollTop > triggerPoint) {
-      // Thêm class visible để hiển thị
       $item.addClass('trangchu-show');
     }
   })
 };
 
-//================== CHITTIETSANPHAM ==================//
+//====================== CHI TIẾT SẢN PHẨM ======================
+
+//Hàm tìm sản phẩm
+function findProduct(productId) {
+  for (var i = 0; i < itemList.length; i++) {
+    if (itemList[i].id === productId) {
+      return itemList[i];
+    }
+  }
+
+  return null;
+}
 
 function addToCartFromDetail() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -69,7 +72,7 @@ document.querySelectorAll('.sanpham').forEach(function (product) {
 const urlParams = new URLSearchParams(window.location.search);
 const productId = parseInt(urlParams.get('id'));
 
-const product = itemList.find(item => item.id === productId);
+const product = findProduct(productId);
 
 if (product) {
   document.querySelector('.chitiet-ten h3').textContent = product.ten;
@@ -85,7 +88,18 @@ function addToCart(productId) {
   var soLuongGioHang = parseInt(soLuongDatHang.value);
 
   var cart = JSON.parse(localStorage.getItem('cart')) || [];
-  var sanPhamTrongGio = cart.find(item => item.id === productId);
+
+  // Hàm tìm sản phẩm trong giỏ
+  function findItemInCart(cart, productId) {
+    for (var i = 0; i < cart.length; i++) {
+      if (cart[i].id === productId) {
+        return cart[i];
+      }
+    }
+    return null;
+  }
+
+  var sanPhamTrongGio = findItemInCart(cart, productId);
 
   const MAX_SO_LUONG = 50;
 
@@ -106,18 +120,8 @@ function addToCart(productId) {
       return;
     }
 
-    function findProduct(productId) {
-      for (var i = 0; i < itemList.length; i++) {
-        if (itemList[i].id === productId) {
-          return itemList[i];
-        }
-      }
-
-      return null;
-    }
-
     var product = findProduct(productId);
-  
+
     if (product) {
       cart.push({
         id: product.id,
@@ -136,14 +140,15 @@ function addToCart(productId) {
 }
 
 function purchasingProducts() {
-
-  addToCart(productId);
-
-  window.location.href = "giohang.html";
-
+  var urlParams = new URLSearchParams(window.location.search);
+  var id = parseInt(urlParams.get('id'));
+  if (id) {
+    addToCart(id);
+    window.location.href = "giohang.html";
+  }
 }
 
-//================== GIOHANG ==================//
+//========================== GIỎ HÀNG ==========================
 
 function showCart() {
   //create a body for later usages
@@ -175,7 +180,7 @@ function showCart() {
 
   for (var i = 0; i < cart.length; i++) {
     var item = cart[i];
-    var product = itemList.find(p => p.id === item.id);
+    var product = findProduct(item.id);
 
     if (product) {
       var photo = product.anh;
@@ -211,10 +216,9 @@ function showCart() {
       delink.href = "#";
       delink.dataset.id = item.id;
       var icon = document.createElement("i");
-      icon.className = "fa fa-trash icon-pink";
+      icon.className = "fas fa-trash icon-pink";
       delink.appendChild(icon);
 
-      // CHỈ GÁN 1 LẦN DUY NHẤT
       delink.onclick = function (e) {
         e.preventDefault();
         removeCart(parseInt(this.dataset.id));
@@ -240,10 +244,17 @@ function showCart() {
 }
 
 function removeCart(productId) {
-  var cart = JSON.parse(localStorage.getItem('cart')) || [];
-  cart = cart.filter(item => item.id !== productId);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  showCart();
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    var newCart = [];
+    
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].id !== productId) {
+            newCart.push(cart[i]);
+        }
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(newCart));
+    showCart();
 }
 
 //Refresh cart on load
@@ -258,7 +269,7 @@ function checkout() {
 
   // Kiểm tra giỏ hàng có trống không
   if (cart.length === 0) {
-    alert("Giỏ hàng của bạn đang trống! Vui lòng thêm sản phẩm trước khi thanh toán.");
+    alert("Giỏ hàng của bạn đang trống!\nBạn thêm sản phẩm trước khi thanh toán.");
     return;
   }
 
@@ -266,7 +277,7 @@ function checkout() {
   var total = 0;
   for (var i = 0; i < cart.length; i++) {
     var item = cart[i];
-    var product = itemList.find(p => p.id === item.id);
+    var product = findProduct(item.id);
     if (product) {
       total += product.gia * item.quantity;
     }
@@ -279,12 +290,10 @@ function checkout() {
   });
 
   // Hiển thị thông báo cảm ơn kèm tổng tiền
-  alert("Chúng mình cảm ơn bạn đã mua hàng!\nTổng giá trị đơn hàng của bạn là: " + vndConvert.format(total) + "\nGóc Họa Sĩ hẹn gặp lại bạn!");
+  alert("Chúng mình cảm ơn bạn đã mua hàng!\nTổng giá trị đơn hàng của bạn là: " + vndConvert.format(total*1.1) + "\nGóc Họa Sĩ hẹn gặp lại bạn!");
 
-  // Xóa toàn bộ giỏ hàng
+
   localStorage.removeItem('cart');
-
-  // Cập nhật lại giao diện giỏ hàng
   showCart();
 }
 
@@ -305,7 +314,7 @@ function login(frm) {
 
   // Kiểm tra mật khẩu
   if (password.value.trim().length < 8) {
-    alert("Mật khẩu dưới 8 ký tự");
+    alert("Mật khẩu phải từ 8 ký tự");
     return false;
   }
 
@@ -329,7 +338,7 @@ function signup(frm) {
 
   // Kiểm tra mật khẩu
   if (password.value.trim().length < 8) {
-    alert("Mật khẩu dưới 8 ký tự");
+    alert("Mật khẩu phải từ 8 ký tự");
     return false;
   }
 
@@ -378,8 +387,8 @@ function contact(frm) {
 
   // Kiểm tra xem số điện thoại người dùng nhập vào có đúng là số và đủ độ dài hay không
   if (phoneReg.test(phone.value) == false) {
-    alert("Số điện thoại không hợp lệ"); // Cảnh báo nếu chứa chữ cái hoặc quá ngắn/quá dài
-    return false;                        
+    alert("Số điện thoại không hợp lệ"); 
+    return false;
   }
 
 

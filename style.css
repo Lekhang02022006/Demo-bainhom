@@ -291,8 +291,6 @@ footer h3 {
 }
 
 /* =========================== TRANG CHỦ =========================== */
-
-
 .trangchu-avatar {
     border-radius: 50%;
 }
@@ -392,7 +390,7 @@ footer h3 {
     color: #fe5054;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
     margin-left: 8px;
 }
 
@@ -558,8 +556,6 @@ footer h3 {
     flex: 1;
 }
 
-
-
 /* =========================== GIỎ HÀNG =========================== */
 
 .Cart-Summary p {
@@ -574,8 +570,15 @@ footer h3 {
     padding: 10px 20px;
 }
 
-.fa-trash {
-    color: #fe97ca;
+.fa-trash{
+   color: #fe97ca;   
+    transition: all 0.1s ease;
+}
+
+.fa-trash:hover {
+     color: #FE5054;
+     scale: calc(1.5);
+
 }
 
 .giohang-img {

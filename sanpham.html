@@ -30,14 +30,14 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- mycss -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.min.css">
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 
-    <script src="data.js"></script>
+    <script src="data.min.js"></script>
 
     <title>Sản Phẩm | Góc Họa Sĩ</title>
 </head>
@@ -1007,16 +1007,15 @@
         crossorigin="anonymous"></script>
 
 
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.min.js"></script>
 
 
     <script>
         $(document).ready(function () {
 
-            // Gọi hàm kiểm tra khi trang load
             checkVisibility_trangchu();
             checkVisibility_totop();
-            // Gọi hàm khi người dùng cuộn
+            
             $(window).scroll(function () {
                 checkVisibility_trangchu();
                 checkVisibility_totop();
